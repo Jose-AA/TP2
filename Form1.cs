@@ -16,5 +16,10 @@ namespace TP2
         {
             InitializeComponent();
         }
+
+        private void integrantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
