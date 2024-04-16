@@ -21,5 +21,16 @@ namespace TP2
         {
 
         }
+
+        private void modificarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void añadirCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AñadirCategoria ventanaAñadirCategoria = new AñadirCategoria();
+            ventanaAñadirCategoria.Show();
+        }
     }
 }

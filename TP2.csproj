@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AñadirCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirCategoria.Designer.cs">
+      <DependentUpon>AñadirCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +65,25 @@
     <Compile Include="Ingreso.Designer.cs">
       <DependentUpon>Ingreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoArticulo.Designer.cs">
+      <DependentUpon>NuevoArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AñadirCategoria.resx">
+      <DependentUpon>AñadirCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoArticulo.resx">
+      <DependentUpon>NuevoArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
