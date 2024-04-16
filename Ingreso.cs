@@ -19,7 +19,7 @@ namespace TP2
 
         private void botonIngresoCANCELAR_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void botonIngresoOK_Click(object sender, EventArgs e)

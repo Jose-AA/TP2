@@ -32,5 +32,15 @@ namespace TP2
             AñadirCategoria ventanaAñadirCategoria = new AñadirCategoria();
             ventanaAñadirCategoria.Show();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
