@@ -18,10 +18,10 @@ namespace TP2
 
         public decimal precio { get; set; }
 
-        //public Marca marcaArticulo { get; set; } ---> falta implementar clase Marca
+        public Marca marcaArticulo { get; set; } 
         
-        //public Categoria categoriaArticulo { get; set; } ---> falta implementar clase Categoria
+        public Categoria categoriaArticulo { get; set; } 
 
-        List<string> imagenes;
+        List<Imagen> imagenes;
     }
 }
