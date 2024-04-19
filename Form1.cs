@@ -27,12 +27,6 @@ namespace TP2
 
         }
 
-        private void añadirCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AñadirCategoria ventanaAñadirCategoria = new AñadirCategoria();
-            ventanaAñadirCategoria.Show();
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -41,6 +35,12 @@ namespace TP2
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void añadirArtículoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmCargarArticulo ventanaCargaArticulo = new FrmCargarArticulo();
+            ventanaCargaArticulo.ShowDialog();
         }
     }
 }
