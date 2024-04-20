@@ -114,5 +114,122 @@
   <ItemGroup>
     <None Include="Resources\Nuevo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contratacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-producto %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-producto %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-producto %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-producto %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-informacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-contacto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacto %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contenedor-de-basura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-peligroso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-producto %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almacenamiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen-de-marca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-online-shopping-promotion-mobile-online-payment-image_662250.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mqdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VMI-logistica-1200x565.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1655225320991.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1655924814941.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\optimiza-tu-gestion-logistica-con-el-control-de-almacenes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
