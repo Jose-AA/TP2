@@ -42,5 +42,10 @@ namespace TP2
             FrmCargarArticulo ventanaCargaArticulo = new FrmCargarArticulo();
             ventanaCargaArticulo.ShowDialog();
         }
+
+        private void artículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,6 +46,7 @@
             this.buscarPorNúmeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirCategoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripUsuarioConectado = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelUsuarios = new System.Windows.Forms.ToolStripLabel();
             this.AgregarUsuario = new System.Windows.Forms.ToolStripButton();
@@ -63,78 +64,100 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonMarcas = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCategorias = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabelMarcasDisponibles = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBoxMarcas = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabelCategoriasDisponibles = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBoxCategoriasDisponibles = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripButtonLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolStripUsuarioConectado.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.artículoToolStripMenuItem,
             this.marcasToolStripMenuItem,
             this.categoríasToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1079, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1079, 40);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // artículoToolStripMenuItem
             // 
+            this.artículoToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.artículoToolStripMenuItem.CheckOnClick = true;
             this.artículoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirArtículoToolStripMenuItem,
             this.modificarArtículoToolStripMenuItem,
             this.añadirArtículoToolStripMenuItem1,
             this.modificarArtículoToolStripMenuItem1,
             this.eliminarArtículoToolStripMenuItem});
+            this.artículoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.artículoToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
+            this.artículoToolStripMenuItem.Image = global::TP2.Properties.Resources.caja;
+            this.artículoToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.artículoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.artículoToolStripMenuItem.ImageTransparentColor = System.Drawing.SystemColors.ControlDarkDark;
             this.artículoToolStripMenuItem.Name = "artículoToolStripMenuItem";
-            this.artículoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.artículoToolStripMenuItem.Text = "Artículo";
+            this.artículoToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.artículoToolStripMenuItem.Size = new System.Drawing.Size(121, 36);
+            this.artículoToolStripMenuItem.Text = "    &Artículo";
+            this.artículoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.artículoToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.artículoToolStripMenuItem.Click += new System.EventHandler(this.artículoToolStripMenuItem_Click);
             // 
             // añadirArtículoToolStripMenuItem
             // 
+            this.añadirArtículoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.añadirArtículoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.añadirArtículoToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
+            this.añadirArtículoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.añadirArtículoToolStripMenuItem.Name = "añadirArtículoToolStripMenuItem";
-            this.añadirArtículoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirArtículoToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
             this.añadirArtículoToolStripMenuItem.Text = "Buscar por nombre";
             // 
             // modificarArtículoToolStripMenuItem
             // 
+            this.modificarArtículoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.modificarArtículoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificarArtículoToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.modificarArtículoToolStripMenuItem.Name = "modificarArtículoToolStripMenuItem";
-            this.modificarArtículoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarArtículoToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
             this.modificarArtículoToolStripMenuItem.Text = "Buscar por nombre";
             this.modificarArtículoToolStripMenuItem.Click += new System.EventHandler(this.modificarArtículoToolStripMenuItem_Click);
             // 
             // añadirArtículoToolStripMenuItem1
             // 
+            this.añadirArtículoToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.añadirArtículoToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.añadirArtículoToolStripMenuItem1.ForeColor = System.Drawing.Color.Navy;
             this.añadirArtículoToolStripMenuItem1.Name = "añadirArtículoToolStripMenuItem1";
-            this.añadirArtículoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.añadirArtículoToolStripMenuItem1.Size = new System.Drawing.Size(246, 30);
             this.añadirArtículoToolStripMenuItem1.Text = "Añadir artículo";
             this.añadirArtículoToolStripMenuItem1.Click += new System.EventHandler(this.añadirArtículoToolStripMenuItem1_Click);
             // 
             // modificarArtículoToolStripMenuItem1
             // 
+            this.modificarArtículoToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.modificarArtículoToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificarArtículoToolStripMenuItem1.ForeColor = System.Drawing.Color.Navy;
             this.modificarArtículoToolStripMenuItem1.Name = "modificarArtículoToolStripMenuItem1";
-            this.modificarArtículoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.modificarArtículoToolStripMenuItem1.Size = new System.Drawing.Size(246, 30);
             this.modificarArtículoToolStripMenuItem1.Text = "Modificar artículo";
             // 
             // eliminarArtículoToolStripMenuItem
             // 
+            this.eliminarArtículoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.eliminarArtículoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eliminarArtículoToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.eliminarArtículoToolStripMenuItem.Name = "eliminarArtículoToolStripMenuItem";
-            this.eliminarArtículoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarArtículoToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
             this.eliminarArtículoToolStripMenuItem.Text = "Eliminar artículo";
             // 
             // marcasToolStripMenuItem
@@ -143,26 +166,36 @@
             this.nombresToolStripMenuItem,
             this.buscarPorNombreToolStripMenuItem,
             this.buscarPorNumeroToolStripMenuItem});
+            this.marcasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marcasToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
+            this.marcasToolStripMenuItem.Image = global::TP2.Properties.Resources.marca;
+            this.marcasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.marcasToolStripMenuItem.Text = "Marcas";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(124, 36);
+            this.marcasToolStripMenuItem.Text = "&Marcas";
             // 
             // nombresToolStripMenuItem
             // 
+            this.nombresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.nombresToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.nombresToolStripMenuItem.Name = "nombresToolStripMenuItem";
-            this.nombresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nombresToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
             this.nombresToolStripMenuItem.Text = "Listado";
             // 
             // buscarPorNombreToolStripMenuItem
             // 
+            this.buscarPorNombreToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buscarPorNombreToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNombreToolStripMenuItem.Name = "buscarPorNombreToolStripMenuItem";
-            this.buscarPorNombreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarPorNombreToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
             this.buscarPorNombreToolStripMenuItem.Text = "Buscar por nombre";
             // 
             // buscarPorNumeroToolStripMenuItem
             // 
+            this.buscarPorNumeroToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buscarPorNumeroToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNumeroToolStripMenuItem.Name = "buscarPorNumeroToolStripMenuItem";
-            this.buscarPorNumeroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarPorNumeroToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
             this.buscarPorNumeroToolStripMenuItem.Text = "Buscar por numero";
             // 
             // categoríasToolStripMenuItem
@@ -172,39 +205,61 @@
             this.buscarPorNombreToolStripMenuItem1,
             this.buscarPorNúmeroToolStripMenuItem,
             this.añadirCategoríaToolStripMenuItem});
+            this.categoríasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoríasToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
+            this.categoríasToolStripMenuItem.Image = global::TP2.Properties.Resources.menu;
+            this.categoríasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.categoríasToolStripMenuItem.Text = "Categorías";
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(155, 36);
+            this.categoríasToolStripMenuItem.Text = "&Categorías";
             // 
             // listadoToolStripMenuItem
             // 
+            this.listadoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.listadoToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
             this.listadoToolStripMenuItem.Text = "Listado";
             // 
             // buscarPorNombreToolStripMenuItem1
             // 
+            this.buscarPorNombreToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buscarPorNombreToolStripMenuItem1.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNombreToolStripMenuItem1.Name = "buscarPorNombreToolStripMenuItem1";
-            this.buscarPorNombreToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.buscarPorNombreToolStripMenuItem1.Size = new System.Drawing.Size(262, 34);
             this.buscarPorNombreToolStripMenuItem1.Text = "Buscar por nombre";
             // 
             // buscarPorNúmeroToolStripMenuItem
             // 
+            this.buscarPorNúmeroToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buscarPorNúmeroToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNúmeroToolStripMenuItem.Name = "buscarPorNúmeroToolStripMenuItem";
-            this.buscarPorNúmeroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarPorNúmeroToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
             this.buscarPorNúmeroToolStripMenuItem.Text = "Buscar por número";
             // 
             // añadirCategoríaToolStripMenuItem
             // 
+            this.añadirCategoríaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.añadirCategoríaToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.añadirCategoríaToolStripMenuItem.Name = "añadirCategoríaToolStripMenuItem";
-            this.añadirCategoríaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirCategoríaToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.salirToolStripMenuItem.Image = global::TP2.Properties.Resources.cerrar_sesion;
+            this.salirToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 36);
+            this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(99, 36);
+            this.toolStripMenuItem1.Text = "               ";
             // 
             // toolStripUsuarioConectado
             // 
@@ -225,10 +280,11 @@
             this.toolStripButtonEditarArticulo,
             this.toolStripButtonListadoArticulos,
             this.toolStripSeparator2,
-            this.toolStripLabel1,
             this.toolStripSeparator3,
             this.toolStripButtonMarcas,
-            this.toolStripButtonCategorias});
+            this.toolStripButtonCategorias,
+            this.toolStripButtonLogOut,
+            this.toolStripLabel1});
             this.toolStripUsuarioConectado.Location = new System.Drawing.Point(0, 514);
             this.toolStripUsuarioConectado.Name = "toolStripUsuarioConectado";
             this.toolStripUsuarioConectado.Size = new System.Drawing.Size(1079, 57);
@@ -237,10 +293,10 @@
             // 
             // toolStripLabelUsuarios
             // 
-            this.toolStripLabelUsuarios.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabelUsuarios.ForeColor = System.Drawing.Color.Navy;
+            this.toolStripLabelUsuarios.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabelUsuarios.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.toolStripLabelUsuarios.Name = "toolStripLabelUsuarios";
-            this.toolStripLabelUsuarios.Size = new System.Drawing.Size(100, 54);
+            this.toolStripLabelUsuarios.Size = new System.Drawing.Size(104, 54);
             this.toolStripLabelUsuarios.Text = "Usuarios";
             // 
             // AgregarUsuario
@@ -294,10 +350,10 @@
             // 
             // toolStripLabelArticulos
             // 
-            this.toolStripLabelArticulos.Font = new System.Drawing.Font("AniMe Matrix - MB_EN", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabelArticulos.ForeColor = System.Drawing.Color.Black;
+            this.toolStripLabelArticulos.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabelArticulos.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.toolStripLabelArticulos.Name = "toolStripLabelArticulos";
-            this.toolStripLabelArticulos.Size = new System.Drawing.Size(175, 54);
+            this.toolStripLabelArticulos.Size = new System.Drawing.Size(104, 54);
             this.toolStripLabelArticulos.Text = "Artículos";
             // 
             // toolStripButton1
@@ -369,55 +425,16 @@
             this.toolStripButtonCategorias.Text = "toolStripButton2";
             this.toolStripButtonCategorias.ToolTipText = "Categorías de artículos";
             // 
-            // toolStrip2
+            // toolStripButtonLogOut
             // 
-            this.toolStrip2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabelMarcasDisponibles,
-            this.toolStripComboBoxMarcas,
-            this.toolStripSeparator6,
-            this.toolStripSeparator5,
-            this.toolStripLabelCategoriasDisponibles,
-            this.toolStripComboBoxCategoriasDisponibles});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1079, 25);
-            this.toolStrip2.Stretch = true;
-            this.toolStrip2.TabIndex = 12;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripLabelMarcasDisponibles
-            // 
-            this.toolStripLabelMarcasDisponibles.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabelMarcasDisponibles.ForeColor = System.Drawing.Color.Navy;
-            this.toolStripLabelMarcasDisponibles.Name = "toolStripLabelMarcasDisponibles";
-            this.toolStripLabelMarcasDisponibles.Size = new System.Drawing.Size(187, 22);
-            this.toolStripLabelMarcasDisponibles.Text = "Marcas disponibles";
-            // 
-            // toolStripComboBoxMarcas
-            // 
-            this.toolStripComboBoxMarcas.Name = "toolStripComboBoxMarcas";
-            this.toolStripComboBoxMarcas.Size = new System.Drawing.Size(121, 25);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabelCategoriasDisponibles
-            // 
-            this.toolStripLabelCategoriasDisponibles.Font = new System.Drawing.Font("Courier New", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabelCategoriasDisponibles.ForeColor = System.Drawing.Color.Navy;
-            this.toolStripLabelCategoriasDisponibles.Name = "toolStripLabelCategoriasDisponibles";
-            this.toolStripLabelCategoriasDisponibles.Size = new System.Drawing.Size(229, 22);
-            this.toolStripLabelCategoriasDisponibles.Text = "Categorías disponibles";
-            // 
-            // toolStripComboBoxCategoriasDisponibles
-            // 
-            this.toolStripComboBoxCategoriasDisponibles.Name = "toolStripComboBoxCategoriasDisponibles";
-            this.toolStripComboBoxCategoriasDisponibles.Size = new System.Drawing.Size(121, 25);
+            this.toolStripButtonLogOut.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButtonLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonLogOut.Image = global::TP2.Properties.Resources.apagar;
+            this.toolStripButtonLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonLogOut.Name = "toolStripButtonLogOut";
+            this.toolStripButtonLogOut.Size = new System.Drawing.Size(54, 54);
+            this.toolStripButtonLogOut.Text = "toolStripButton2";
+            this.toolStripButtonLogOut.ToolTipText = "Logout";
             // 
             // toolStripLabel1
             // 
@@ -425,11 +442,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(129, 54);
             this.toolStripLabel1.Text = "USUARIO CONECTADO";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // Form1
             // 
@@ -439,11 +451,12 @@
             this.BackgroundImage = global::TP2.Properties.Resources.optimiza_tu_gestion_logistica_con_el_control_de_almacenes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1079, 571);
-            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStripUsuarioConectado);
             this.Controls.Add(this.menuStrip1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ForeColor = System.Drawing.Color.LightSalmon;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -455,15 +468,12 @@
             this.menuStrip1.PerformLayout();
             this.toolStripUsuarioConectado.ResumeLayout(false);
             this.toolStripUsuarioConectado.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem artículoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirArtículoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarArtículoToolStripMenuItem;
@@ -497,14 +507,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonMarcas;
         private System.Windows.Forms.ToolStripButton toolStripButtonCategorias;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabelMarcasDisponibles;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxMarcas;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripLabel toolStripLabelCategoriasDisponibles;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxCategoriasDisponibles;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonLogOut;
+        public System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

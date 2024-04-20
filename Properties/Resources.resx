@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="editar-informacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editar-informacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1655924814941" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1655924814941.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contacto (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contacto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,11 +130,14 @@
   <data name="paquete (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paquete (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="paquete (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paquete (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contacto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contacto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1655225320991" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1655225320991.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="orden" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orden.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -150,6 +153,9 @@
   </data>
   <data name="agregar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eliminar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contenedor-de-basura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contenedor-de-basura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +175,8 @@
   <data name="lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nuevo-producto (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuevo-producto (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ktalogLogoGrande" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ktalogLogoGrande.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nuevo-producto (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevo-producto (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,32 +202,44 @@
   <data name="ktlgMaLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ktlgMaLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="editar-informacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editar-informacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="agregar-contacto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar-contacto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ktalogLogoGrande" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ktalogLogoGrande.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nuevo-producto (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuevo-producto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1655225320991" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1655225320991.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agregar-producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eliminar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar-usuario (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar-usuario (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nuevo-producto (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuevo-producto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuevo-producto (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuevo-producto (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar-usuario (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-usuario (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar-producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paquete (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paquete (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imagen-de-marca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagen-de-marca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="apagar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apagar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nuevo-producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevo-producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paquete (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paquete (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,19 +250,19 @@
   <data name="almacenamiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\almacenamiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Nuevo artículo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nuevo artículo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="optimiza-tu-gestion-logistica-con-el-control-de-almacenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\optimiza-tu-gestion-logistica-con-el-control-de-almacenes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aplicaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aplicaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VMI-logistica-1200x565" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VMI-logistica-1200x565.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar-usuario (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-usuario (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Nuevo artículo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nuevo artículo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1655924814941" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1655924814941.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="optimiza-tu-gestion-logistica-con-el-control-de-almacenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\optimiza-tu-gestion-logistica-con-el-control-de-almacenes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
