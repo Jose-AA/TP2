@@ -17,24 +17,9 @@ namespace TP2
             InitializeComponent();
         }
 
-        private void integrantesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void modificarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void añadirArtículoToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -43,9 +28,12 @@ namespace TP2
             ventanaCargaArticulo.ShowDialog();
         }
 
-        private void artículoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            FrmCargarArticulo ventanaCargaArticulo = new FrmCargarArticulo();
+            ventanaCargaArticulo.ShowDialog();
         }
+
+     
     }
 }

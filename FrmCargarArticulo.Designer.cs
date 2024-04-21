@@ -51,6 +51,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Navy;
             this.lblTitulo.Location = new System.Drawing.Point(37, 23);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(180, 31);
@@ -61,6 +62,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.Navy;
             this.lblNombre.Location = new System.Drawing.Point(12, 106);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(56, 16);
@@ -71,6 +73,7 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.Navy;
             this.lblCodigo.Location = new System.Drawing.Point(12, 165);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(51, 16);
@@ -81,6 +84,7 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.ForeColor = System.Drawing.Color.Navy;
             this.lblMarca.Location = new System.Drawing.Point(12, 225);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(45, 16);
@@ -91,6 +95,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.ForeColor = System.Drawing.Color.Navy;
             this.lblCategoria.Location = new System.Drawing.Point(12, 280);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(66, 16);
@@ -101,6 +106,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.Navy;
             this.lblDescripcion.Location = new System.Drawing.Point(12, 332);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(79, 16);
@@ -130,7 +136,7 @@
             // 
             // pbxImagenes
             // 
-            this.pbxImagenes.Location = new System.Drawing.Point(423, 102);
+            this.pbxImagenes.Location = new System.Drawing.Point(423, 88);
             this.pbxImagenes.Name = "pbxImagenes";
             this.pbxImagenes.Size = new System.Drawing.Size(277, 184);
             this.pbxImagenes.TabIndex = 9;
@@ -138,6 +144,7 @@
             // 
             // btnAnterior
             // 
+            this.btnAnterior.ForeColor = System.Drawing.Color.Navy;
             this.btnAnterior.Location = new System.Drawing.Point(423, 292);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 23);
@@ -147,6 +154,7 @@
             // 
             // btnSiguiente
             // 
+            this.btnSiguiente.ForeColor = System.Drawing.Color.Navy;
             this.btnSiguiente.Location = new System.Drawing.Point(625, 292);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
@@ -156,6 +164,7 @@
             // 
             // btnCargarImagen
             // 
+            this.btnCargarImagen.ForeColor = System.Drawing.Color.Navy;
             this.btnCargarImagen.Location = new System.Drawing.Point(511, 345);
             this.btnCargarImagen.Name = "btnCargarImagen";
             this.btnCargarImagen.Size = new System.Drawing.Size(86, 39);
@@ -165,6 +174,7 @@
             // 
             // btnCrearArticulo
             // 
+            this.btnCrearArticulo.ForeColor = System.Drawing.Color.Navy;
             this.btnCrearArticulo.Location = new System.Drawing.Point(331, 416);
             this.btnCrearArticulo.Name = "btnCrearArticulo";
             this.btnCrearArticulo.Size = new System.Drawing.Size(100, 40);
@@ -192,6 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 468);
             this.Controls.Add(this.ddlCategoria);
             this.Controls.Add(this.ddlMarca);

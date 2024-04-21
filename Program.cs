@@ -16,7 +16,7 @@ namespace TP2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ingreso());
+            Application.Run(new Form1());
         }
     }
 }
