@@ -246,15 +246,5 @@
   <ItemGroup>
     <None Include="Resources\cerrar-sesion.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\dominio\dominio.csproj">
-      <Project>{8682cee3-1146-47e4-84e7-0d84307ca905}</Project>
-      <Name>dominio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\negocio\negocio.csproj">
-      <Project>{a4b8da7c-31fd-4e88-bebb-15ee5d1aca57}</Project>
-      <Name>negocio</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
