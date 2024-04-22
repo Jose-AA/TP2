@@ -58,6 +58,18 @@
     <Compile Include="FrmCargarArticulo.Designer.cs">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCargarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCargarCategoria.Designer.cs">
+      <DependentUpon>FrmCargarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModificarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarCategoria.Designer.cs">
+      <DependentUpon>FrmModificarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCargarArticulo.resx">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCargarCategoria.resx">
+      <DependentUpon>FrmCargarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarCategoria.resx">
+      <DependentUpon>FrmModificarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
@@ -245,6 +263,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="dominio\dominio.csproj">
+      <Project>{8682cee3-1146-47e4-84e7-0d84307ca905}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="negocio\negocio.csproj">
+      <Project>{a4b8da7c-31fd-4e88-bebb-15ee5d1aca57}</Project>
+      <Name>negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
