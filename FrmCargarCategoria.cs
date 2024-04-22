@@ -24,11 +24,16 @@ namespace TP2
             CategoriaNegocio negocio = new CategoriaNegocio();
             Categoria categoria = new Categoria();
             
+            categoria.Descripcion = txtCategoria.Text;
+
+            if(categoria.Descripcion == "")
+            {
+                MessageBox.Show("Por favor ingrese una descripción");
+                return;
+            }
 
             try
             {
-
-                categoria.Descripcion = txtCategoria.Text;
 
                 negocio.agregar(categoria);
                 MessageBox.Show("Categoria agregada exitosamente");

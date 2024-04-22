@@ -65,6 +65,7 @@
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregarCategoria
             // 
@@ -74,6 +75,7 @@
             this.btnAgregarCategoria.TabIndex = 7;
             this.btnAgregarCategoria.Text = "Aceptar";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
             // txtDescripcion
             // 
