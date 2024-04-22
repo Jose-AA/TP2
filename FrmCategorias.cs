@@ -66,5 +66,43 @@ namespace TP2
             modificar.ShowDialog();
             cargar();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionado = null;
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+
+            if (seleccionado == null)
+            {
+                MessageBox.Show("Por favor seleccione primero una categoria");
+                return;
+            }
+
+
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea eliminar la selección '" + seleccionado.Descripcion + "''?", "Eliminar Categoría", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    negocio.eliminar(seleccionado);
+                    MessageBox.Show("Se ha eliminado la categoría exitosamente");
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+
+                
+                
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
+            cargar();
+        }
     }
 }
