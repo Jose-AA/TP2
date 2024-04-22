@@ -33,7 +33,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
@@ -87,12 +87,13 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtBusqueda
+            // txtFiltro
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(256, 66);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(127, 20);
-            this.txtBusqueda.TabIndex = 5;
+            this.txtFiltro.Location = new System.Drawing.Point(256, 66);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(127, 20);
+            this.txtFiltro.TabIndex = 5;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // label1
             // 
@@ -113,7 +114,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(638, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -135,7 +136,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Label label1;
     }
 }

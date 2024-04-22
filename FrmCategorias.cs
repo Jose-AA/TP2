@@ -104,5 +104,25 @@ namespace TP2
             
             cargar();
         }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            List<Categoria> listaFiltrada;
+
+            string filtro = txtFiltro.Text;
+
+            if (filtro != "")
+            {
+                listaFiltrada = listaCategorias.FindAll(x => x.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaCategorias;
+            }
+
+
+            dgvCategorias.DataSource = null;
+            dgvCategorias.DataSource = listaFiltrada;
+        }
     }
 }
