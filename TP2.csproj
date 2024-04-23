@@ -52,11 +52,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMarcas\FrmBuscarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarcas\FrmBuscarMarca.Designer.cs">
+      <DependentUpon>FrmBuscarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarcas\FrmAgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarcas\FrmAgregarMarca.Designer.cs">
+      <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCargarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCargarArticulo.Designer.cs">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarcas\FrmEliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarcas\FrmEliminarMarca.Designer.cs">
+      <DependentUpon>FrmEliminarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarcas\FrmModificarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarcas\FrmModificarMarca.Designer.cs">
+      <DependentUpon>FrmModificarMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingreso.cs">
       <SubType>Form</SubType>
@@ -70,8 +94,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMarcas\FrmBuscarMarca.resx">
+      <DependentUpon>FrmBuscarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarcas\FrmAgregarMarca.resx">
+      <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCargarArticulo.resx">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarcas\FrmEliminarMarca.resx">
+      <DependentUpon>FrmEliminarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarcas\FrmModificarMarca.resx">
+      <DependentUpon>FrmModificarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
@@ -86,6 +122,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\dominio.Marca.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -245,6 +282,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="dominio\dominio.csproj">
+      <Project>{8682cee3-1146-47e4-84e7-0d84307ca905}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="negocio\negocio.csproj">
+      <Project>{a4b8da7c-31fd-4e88-bebb-15ee5d1aca57}</Project>
+      <Name>negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
