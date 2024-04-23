@@ -58,10 +58,10 @@
     <Compile Include="FormMarcas\FrmAgregarMarca.Designer.cs">
       <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMarcas\FrmCargarArticulo.cs">
+    <Compile Include="FrmCargarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMarcas\FrmCargarArticulo.Designer.cs">
+    <Compile Include="FrmCargarArticulo.Designer.cs">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMarcas\FrmEliminarMarca.cs">
@@ -91,7 +91,7 @@
     <EmbeddedResource Include="FormMarcas\FrmAgregarMarca.resx">
       <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMarcas\FrmCargarArticulo.resx">
+    <EmbeddedResource Include="FrmCargarArticulo.resx">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMarcas\FrmEliminarMarca.resx">
