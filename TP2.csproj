@@ -52,11 +52,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategorias.cs">
+    <Compile Include="FormMarcas\FrmBuscarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCategorias.Designer.cs">
-      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    <Compile Include="FormMarcas\FrmBuscarMarca.Designer.cs">
+      <DependentUpon>FrmBuscarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarcas\FrmAgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarcas\FrmAgregarMarca.Designer.cs">
+      <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCargarArticulo.cs">
       <SubType>Form</SubType>
@@ -64,17 +70,17 @@
     <Compile Include="FrmCargarArticulo.Designer.cs">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCargarCategoria.cs">
+    <Compile Include="FormMarcas\FrmEliminarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCargarCategoria.Designer.cs">
-      <DependentUpon>FrmCargarCategoria.cs</DependentUpon>
+    <Compile Include="FormMarcas\FrmEliminarMarca.Designer.cs">
+      <DependentUpon>FrmEliminarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModificarCategoria.cs">
+    <Compile Include="FormMarcas\FrmModificarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModificarCategoria.Designer.cs">
-      <DependentUpon>FrmModificarCategoria.cs</DependentUpon>
+    <Compile Include="FormMarcas\FrmModificarMarca.Designer.cs">
+      <DependentUpon>FrmModificarMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingreso.cs">
       <SubType>Form</SubType>
@@ -88,17 +94,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMarcas\FrmBuscarMarca.resx">
+      <DependentUpon>FrmBuscarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarcas\FrmAgregarMarca.resx">
+      <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCargarArticulo.resx">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCargarCategoria.resx">
-      <DependentUpon>FrmCargarCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="FormMarcas\FrmEliminarMarca.resx">
+      <DependentUpon>FrmEliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategorias.resx">
-      <DependentUpon>FrmCategorias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmModificarCategoria.resx">
-      <DependentUpon>FrmModificarCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="FormMarcas\FrmModificarMarca.resx">
+      <DependentUpon>FrmModificarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
@@ -113,6 +122,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\dominio.Marca.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
