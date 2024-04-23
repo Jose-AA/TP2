@@ -66,15 +66,38 @@ namespace TP2
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            Marca marca = new Marca();
-            NegocioMarca negocioMarca = new NegocioMarca();
-            marca.descripcion = Descripcion_a_Eliminar.Text;
-            marca.id = int.Parse(IdEliminacion.Text);
-            negocioMarca.eliminar(marca);   
+            if (MessageBox.Show("¿Está seguro que desea eliminar la marca?", "Eliminar Marca", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    Marca marca = new Marca();
+                    NegocioMarca negocioMarca = new NegocioMarca();
+                    marca.descripcion = Descripcion_a_Eliminar.Text;
+                    marca.id = int.Parse(IdEliminacion.Text);
+                    negocioMarca.eliminar(marca);
+                    IdEliminacion.Text = "";
+                    Descripcion_a_Eliminar.Text = "";
+                    cargarGrilla();
+                }
+                catch (Exception ex)
+                {
+                    if (IdEliminacion.Text == "")
+                    {
+                        MessageBox.Show("Debe seleccionar una marca para poder eliminarla ");
+                    }
+                    else {
+                        MessageBox.Show(ex.Message);
+                                       }
+                 
+                }
+                
+            }
 
-            IdEliminacion .Text = "";
-            Descripcion_a_Eliminar.Text = "";
-            cargarGrilla();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

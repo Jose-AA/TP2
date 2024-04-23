@@ -15,10 +15,12 @@ namespace TP2
     {
         List<Marca> lista = new List<Marca>();
         
-        //Esta Funcion Carga la Grilla con las Marcas
-        public void cargarGrilla()
+        public void cargarGrillayvaloresPredeterminados()
         {
             NegocioMarca negocioMarca = new NegocioMarca();
+            NegocioMarca Id = new NegocioMarca();
+            int id = Id.UltimoIdmarcaRegistrada() + 1;
+            TexBoxIdNM.Text = id.ToString();
             try
             {
                 lista = negocioMarca.listar();
@@ -36,11 +38,8 @@ namespace TP2
         }
 
         public void FormMarcas_Load(object sender, EventArgs e)
-        {   
-            cargarGrilla();
-            NegocioMarca Id = new NegocioMarca();
-            int id = Id.UltimoIdmarcaRegistrada()+1;
-            TexBoxIdNM.Text = id.ToString();
+        {
+            cargarGrillayvaloresPredeterminados();
 
         }
        
@@ -66,7 +65,7 @@ namespace TP2
                 NegocioMarca negocioMarca = new NegocioMarca();
                 negocioMarca.agregar(nuevaMarca);
                 MessageBox.Show("Marca agregada correctamente");
-                cargarGrilla();
+                cargarGrillayvaloresPredeterminados();
             }
             catch (Exception ex)
             {

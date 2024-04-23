@@ -64,25 +64,20 @@ namespace negocio
             int UltimoIdMarca = -1;
             try
             {
-                datos.settearConsulta("select max(Id) as id from MARCAS");
+                datos.settearConsulta("SELECT IDENT_CURRENT('MARCAS') AS UltimoID");
                 datos.ejecutarLectura();
-                
-                while (datos.Lector.Read())
-                {
-                    Marca aux = new Marca();
-                    aux.id = (int)datos.Lector["Id"];
-                    UltimoIdMarca = aux.id;
-                    
-                }
-                return UltimoIdMarca;
 
+                if (datos.Lector.Read())
+                {
+                    UltimoIdMarca = Convert.ToInt32(datos.Lector["UltimoID"]);
+                }
+
+                return UltimoIdMarca;
             }
             catch (Exception ex)
             {
-             
                 throw ex;
             }
-
             finally
             {
                 datos.cerrarConexion();
