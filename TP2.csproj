@@ -52,28 +52,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAgregarMarca.cs">
+    <Compile Include="FormMarcas\FrmAgregarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAgregarMarca.Designer.cs">
+    <Compile Include="FormMarcas\FrmAgregarMarca.Designer.cs">
       <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCargarArticulo.cs">
+    <Compile Include="FormMarcas\FrmCargarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCargarArticulo.Designer.cs">
+    <Compile Include="FormMarcas\FrmCargarArticulo.Designer.cs">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEliminarMarca.cs">
+    <Compile Include="FormMarcas\FrmEliminarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEliminarMarca.Designer.cs">
+    <Compile Include="FormMarcas\FrmEliminarMarca.Designer.cs">
       <DependentUpon>FrmEliminarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModificarMarca.cs">
+    <Compile Include="FormMarcas\FrmModificarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModificarMarca.Designer.cs">
+    <Compile Include="FormMarcas\FrmModificarMarca.Designer.cs">
       <DependentUpon>FrmModificarMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingreso.cs">
@@ -88,16 +88,16 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAgregarMarca.resx">
+    <EmbeddedResource Include="FormMarcas\FrmAgregarMarca.resx">
       <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCargarArticulo.resx">
+    <EmbeddedResource Include="FormMarcas\FrmCargarArticulo.resx">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEliminarMarca.resx">
+    <EmbeddedResource Include="FormMarcas\FrmEliminarMarca.resx">
       <DependentUpon>FrmEliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModificarMarca.resx">
+    <EmbeddedResource Include="FormMarcas\FrmModificarMarca.resx">
       <DependentUpon>FrmModificarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
