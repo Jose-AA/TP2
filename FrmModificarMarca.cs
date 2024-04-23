@@ -15,7 +15,8 @@ namespace TP2
 {
     public partial class FrmModificarMarca : Form
     {
-        List<Marca> lista = new List<Marca>();  
+        List<Marca> lista = new List<Marca>();
+        NegocioMarca negocioMarca = new NegocioMarca();
 
         public void cargarGrilla()
         {
@@ -28,24 +29,6 @@ namespace TP2
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        }
-
-        public void ModificarMarca(Marca marca)
-        { 
-           
-            try
-            {
-                marca.id = int.Parse(IdModificacion.Text);  
-                marca.descripcion = Descripcion_a_Modificar.Text;
-                NegocioMarca negocioMarca = new NegocioMarca();
-                negocioMarca.modificar(marca);
-                MessageBox.Show("Marca Modificada");
-                cargarGrilla();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(" No a selecionado la marca a modificar ");
             }
         }
         public FrmModificarMarca()
@@ -65,11 +48,13 @@ namespace TP2
 
         private void button1_Click(object sender, EventArgs e)
         {   
+           
             Marca marca = new Marca();
             marca.descripcion = Descripcion_a_Modificar.Text;
-            ModificarMarca(marca);
+            negocioMarca.modificar(marca);
             IdModificacion.Text = "";
             Descripcion_a_Modificar.Text = "";
+            cargarGrilla();
         }
     }
 }

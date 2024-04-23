@@ -64,6 +64,12 @@
     <Compile Include="FrmCargarArticulo.Designer.cs">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarMarca.Designer.cs">
+      <DependentUpon>FrmEliminarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModificarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCargarArticulo.resx">
       <DependentUpon>FrmCargarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarMarca.resx">
+      <DependentUpon>FrmEliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarMarca.resx">
       <DependentUpon>FrmModificarMarca.cs</DependentUpon>
