@@ -51,7 +51,7 @@
             this.txtCategoria.Location = new System.Drawing.Point(96, 149);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(135, 20);
-            this.txtCategoria.TabIndex = 1;
+            this.txtCategoria.TabIndex = 0;
             // 
             // lblDescripcion
             // 
@@ -69,7 +69,7 @@
             this.btnAgregarCategoria.Location = new System.Drawing.Point(40, 209);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(78, 22);
-            this.btnAgregarCategoria.TabIndex = 3;
+            this.btnAgregarCategoria.TabIndex = 1;
             this.btnAgregarCategoria.Text = "Aceptar";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
@@ -79,7 +79,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(192, 209);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(78, 22);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -95,7 +95,12 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblTitulo);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(333, 320);
+            this.MinimumSize = new System.Drawing.Size(333, 320);
             this.Name = "FrmCargarCategoria";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Categoria";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -62,7 +62,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(192, 209);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(78, 22);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -72,7 +72,7 @@
             this.btnAgregarCategoria.Location = new System.Drawing.Point(40, 209);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(78, 22);
-            this.btnAgregarCategoria.TabIndex = 7;
+            this.btnAgregarCategoria.TabIndex = 1;
             this.btnAgregarCategoria.Text = "Aceptar";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
@@ -82,7 +82,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(89, 149);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(135, 20);
-            this.txtDescripcion.TabIndex = 9;
+            this.txtDescripcion.TabIndex = 0;
             // 
             // FrmModificarCategoria
             // 
@@ -95,7 +95,11 @@
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblTitulo);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(333, 320);
+            this.MinimumSize = new System.Drawing.Size(333, 320);
             this.Name = "FrmModificarCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Categoria";
             this.ResumeLayout(false);
             this.PerformLayout();
