@@ -10,7 +10,17 @@ namespace dominio
     {
         public int IDImagen { get; set; }
         public int IDArticulo { get; set; }
-        public Uri Url { get; set; }
+        public string Url { get; set; }
 
+        public Imagen(int iDArticulo, string url)
+        {
+
+            this.IDArticulo = iDArticulo;
+            this.Url = url;
+        }
+
+        public Imagen()
+        {
+        }
     }
 }
