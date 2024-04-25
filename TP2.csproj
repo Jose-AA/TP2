@@ -82,6 +82,24 @@
     <Compile Include="FormMarcas\FrmModificarMarca.Designer.cs">
       <DependentUpon>FrmModificarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCategoria\FrmCargarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoria\FrmCargarCategoria.Designer.cs">
+      <DependentUpon>FrmCargarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCategoria\FrmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoria\FrmCategorias.Designer.cs">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCategoria\FrmModificarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoria\FrmModificarCategoria.Designer.cs">
+      <DependentUpon>FrmModificarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +126,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMarcas\FrmModificarMarca.resx">
       <DependentUpon>FrmModificarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoria\FrmCargarCategoria.resx">
+      <DependentUpon>FrmCargarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoria\FrmCategorias.resx">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoria\FrmModificarCategoria.resx">
+      <DependentUpon>FrmModificarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
