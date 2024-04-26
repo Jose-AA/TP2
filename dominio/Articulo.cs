@@ -25,7 +25,6 @@ namespace dominio
         public Categoria categoriaArticulo { get; set; }
         public string urlImagen { get; set; }
 
-
         public List<Imagen> imagenes { get; set; }
     }
 }

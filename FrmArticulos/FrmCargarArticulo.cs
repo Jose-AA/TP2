@@ -38,28 +38,45 @@ namespace TP2
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                if(articulo == null)
-                    articulo = new Articulo();
-                
+                bool ArticuloNoexistente = false;
+                if (articulo == null) { 
+                articulo = new Articulo();
+                ArticuloNoexistente = true;
+                    articulo.id = negocio.UltimoArticuloRegistrado();
+                }
+
                 articulo.nombre = txtNombre.Text;
                 articulo.codigo = txtCodigo.Text;
                 articulo.descripcion = textBoxDescripcion.Text;
                 articulo.precio = decimal.Parse(textBoxPrecio.Text);
+                articulo.marcaArticulo = new Marca();
+                articulo.marcaArticulo.id = 1;
+                articulo.marcaArticulo.descripcion = "Sin definir";
+                articulo.categoriaArticulo = new Categoria();
+                articulo.categoriaArticulo.ID = 1;
+                articulo.categoriaArticulo.Descripcion = "Sin definir";
+                
+
+                articulo.imagenes = new List<Imagen>();
+
                 Imagen ima = new Imagen(articulo.id, textBoxURL.Text);
-                articulo.imagenes.Add(ima);
+
+                articulo.imagenes.Add(ima); 
+
+                MessageBox.Show("se envio el constructor vacio correctamente");
 
                 
 
-                if(articulo.id != 0)
+                if(!ArticuloNoexistente)
                 {
-                   negocio.modificar(articulo);
-                    negocio.modificarImagenes(articulo);
+                    MessageBox.Show("modificando ....");
+                    negocio.modificar(articulo);
                     MessageBox.Show("Articulo modificado correctamente");
                 }
                 else
-                {
+                {   MessageBox.Show("agregando ....");
                     negocio.agregarImagen(articulo.id, ima.Url);
-                    negocio.agregarArticulo(articulo);
+                    negocio.Agregar2(articulo);
                     MessageBox.Show("Articulo agregado correctamente");
                 }
 

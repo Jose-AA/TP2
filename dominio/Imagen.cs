@@ -19,6 +19,11 @@ namespace dominio
             this.Url = url;
         }
 
+        public override string ToString()
+        {
+            return Url;
+        }
+
         public Imagen()
         {
         }

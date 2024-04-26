@@ -284,7 +284,6 @@
             // 
             // btnCargarImagen
             // 
-            //this.btnCargarImagen.BackgroundImage = global::TP2.Properties.Resources.imagen__2_;
             this.btnCargarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCargarImagen.ForeColor = System.Drawing.Color.Navy;
             this.btnCargarImagen.Location = new System.Drawing.Point(240, 563);
@@ -302,6 +301,7 @@
             this.pbxImagenes.Location = new System.Drawing.Point(137, 194);
             this.pbxImagenes.Name = "pbxImagenes";
             this.pbxImagenes.Size = new System.Drawing.Size(277, 278);
+            this.pbxImagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagenes.TabIndex = 9;
             this.pbxImagenes.TabStop = false;
             // 

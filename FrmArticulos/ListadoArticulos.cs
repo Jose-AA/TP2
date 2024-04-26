@@ -11,9 +11,16 @@ using negocio;
 using dominio;
 namespace TP2
 {
+
     public partial class ListadoArticulos : Form
     {
+
+
+
         private List<Articulo> listaArticulos;
+
+
+
         public ListadoArticulos()
         {
             InitializeComponent();
@@ -36,28 +43,32 @@ namespace TP2
             }
         }
 
+
         private void actualizarListado()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
-
             try
             {
-                listaArticulos = negocio.listar();
-                dgvListadoArticulos.DataSource = listaArticulos;
+                listaArticulos = negocio.listar()
+                                    .GroupBy(a => a.id)
+                                    .Select(g => g.First())
+                                    .ToList();
 
-                //Para eliminar la columna ID si se llega a requerir 
-                //dgvListadoArticulos.Columns["Id"].Visible = false;
+                dgvListadoArticulos.DataSource = listaArticulos;
                 dgvListadoArticulos.Columns["UrlImagen"].Visible = false;
-                cargarImagen(listaArticulos[0].imagenes);
+
+                // Aquí cargas la imagen del primer artículo en caso de que haya algún artículo en la lista
+                if (listaArticulos.Count > 0)
+                {
+                    cargarImagen(listaArticulos[0].imagenes);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString() + "error en load de listado articulos");
-                
             }
         }
-
         private void cargarImagen(List<Imagen> imagen)
         {
 

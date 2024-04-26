@@ -113,7 +113,7 @@ namespace TP2
 
             if (filtro != "")
             {
-                listaFiltrada = listaCategorias.FindAll(x => x.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+                listaFiltrada = listaCategorias.FindAll(x => x.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.ID.ToString().Contains(filtro));
             }
             else
             {

@@ -1,6 +1,6 @@
 ﻿namespace TP2
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.artículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirArtículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +41,6 @@
             this.buscarPorNumeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPorNombreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -153,6 +152,7 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 34);
             this.toolStripMenuItem4.Text = "Listar";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // marcasToolStripMenuItem
             // 
@@ -160,8 +160,7 @@
             this.nombresToolStripMenuItem,
             this.buscarPorNumeroToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem5});
+            this.toolStripMenuItem3});
             this.marcasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marcasToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.marcasToolStripMenuItem.Image = global::TP2.Properties.Resources.marca;
@@ -175,41 +174,36 @@
             this.nombresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.nombresToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.nombresToolStripMenuItem.Name = "nombresToolStripMenuItem";
-            this.nombresToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.nombresToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.nombresToolStripMenuItem.Text = "Buscar";
+            this.nombresToolStripMenuItem.Click += new System.EventHandler(this.nombresToolStripMenuItem_Click);
             // 
             // buscarPorNumeroToolStripMenuItem
             // 
             this.buscarPorNumeroToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.buscarPorNumeroToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNumeroToolStripMenuItem.Name = "buscarPorNumeroToolStripMenuItem";
-            this.buscarPorNumeroToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.buscarPorNumeroToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.buscarPorNumeroToolStripMenuItem.Text = "Añadir";
+            this.buscarPorNumeroToolStripMenuItem.Click += new System.EventHandler(this.buscarPorNumeroToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.toolStripMenuItem2.ForeColor = System.Drawing.Color.Navy;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 34);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 34);
             this.toolStripMenuItem2.Text = "Modificar";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.toolStripMenuItem3.ForeColor = System.Drawing.Color.Navy;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(174, 34);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 34);
             this.toolStripMenuItem3.Text = "Eliminar";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.toolStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItem5.ForeColor = System.Drawing.Color.Navy;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(174, 34);
-            this.toolStripMenuItem5.Text = "Listar";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // categoríasToolStripMenuItem
             // 
@@ -232,23 +226,25 @@
             this.listadoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.listadoToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.listadoToolStripMenuItem.Text = "Buscar";
+            this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
             // 
             // buscarPorNombreToolStripMenuItem1
             // 
             this.buscarPorNombreToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.buscarPorNombreToolStripMenuItem1.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNombreToolStripMenuItem1.Name = "buscarPorNombreToolStripMenuItem1";
-            this.buscarPorNombreToolStripMenuItem1.Size = new System.Drawing.Size(174, 34);
+            this.buscarPorNombreToolStripMenuItem1.Size = new System.Drawing.Size(180, 34);
             this.buscarPorNombreToolStripMenuItem1.Text = "Añadir";
+            this.buscarPorNombreToolStripMenuItem1.Click += new System.EventHandler(this.buscarPorNombreToolStripMenuItem1_Click);
             // 
             // buscarPorNúmeroToolStripMenuItem
             // 
             this.buscarPorNúmeroToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.buscarPorNúmeroToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNúmeroToolStripMenuItem.Name = "buscarPorNúmeroToolStripMenuItem";
-            this.buscarPorNúmeroToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.buscarPorNúmeroToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.buscarPorNúmeroToolStripMenuItem.Text = "Modificar";
             // 
             // añadirCategoríaToolStripMenuItem
@@ -256,7 +252,7 @@
             this.añadirCategoríaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.añadirCategoríaToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.añadirCategoríaToolStripMenuItem.Name = "añadirCategoríaToolStripMenuItem";
-            this.añadirCategoríaToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.añadirCategoríaToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.añadirCategoríaToolStripMenuItem.Text = "Eliminar";
             // 
             // toolStripMenuItem7
@@ -265,7 +261,7 @@
             this.toolStripMenuItem7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem7.ForeColor = System.Drawing.Color.Navy;
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(174, 34);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(180, 34);
             this.toolStripMenuItem7.Text = "Listar";
             // 
             // salirToolStripMenuItem
@@ -404,7 +400,7 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(129, 54);
             this.toolStripLabel1.Text = "USUARIO CONECTADO";
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -421,7 +417,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -466,7 +462,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
     }
 }
