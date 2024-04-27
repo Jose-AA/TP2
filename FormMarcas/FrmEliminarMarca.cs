@@ -23,6 +23,25 @@ namespace TP2
            
         }
 
+        private bool validarBajaMarca(Marca seleccionado)
+        {
+
+            //Para validar si existen articulos cargados antes de borrar la marca
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            List<Articulo> articulosCargados;
+            articulosCargados = articuloNegocio.listar();
+
+            foreach (var articulo in articulosCargados)
+            {
+                if (articulo.marcaArticulo.id == seleccionado.id)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         public void cargarGrilla()
         {
             NegocioMarca negocioMarca = new NegocioMarca();
@@ -74,10 +93,20 @@ namespace TP2
                     NegocioMarca negocioMarca = new NegocioMarca();
                     marca.descripcion = Descripcion_a_Eliminar.Text;
                     marca.id = int.Parse(IdEliminacion.Text);
-                    negocioMarca.eliminar(marca);
-                    IdEliminacion.Text = "";
-                    Descripcion_a_Eliminar.Text = "";
-                    cargarGrilla();
+
+                    if(validarBajaMarca(marca) == true)
+                    {
+                        negocioMarca.eliminar(marca);
+                        IdEliminacion.Text = "";
+                        Descripcion_a_Eliminar.Text = "";
+                        cargarGrilla();
+                    }
+                    else
+                    {
+                        MessageBox.Show("La marca " + marca.descripcion + " tiene articulos asociados. Por favor, modifique los artículos asociados para continuar con la baja de la marca");
+                        return;
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -85,9 +114,10 @@ namespace TP2
                     {
                         MessageBox.Show("Debe seleccionar una marca para poder eliminarla ");
                     }
-                    else {
+                    else 
+                    {
                         MessageBox.Show(ex.Message);
-                                       }
+                    }
                  
                 }
                 
