@@ -235,6 +235,7 @@
             this.buttonAñadirCategoria.Text = "Añadir Categoría";
             this.buttonAñadirCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAñadirCategoria.UseVisualStyleBackColor = true;
+            this.buttonAñadirCategoria.Click += new System.EventHandler(this.buttonAñadirCategoria_Click);
             // 
             // buttonAñadirMarca
             // 

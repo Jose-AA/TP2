@@ -21,6 +21,23 @@ namespace TP2
             InitializeComponent();
         }
 
+        private void cargar()
+        {
+            try
+            {
+                NegocioMarca accesoMarcas = new NegocioMarca();
+                CategoriaNegocio accesoCategorias = new CategoriaNegocio();
+
+                ddlMarca.DataSource = accesoMarcas.listar();
+                ddlCategoria.DataSource = accesoCategorias.listar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         public FrmCargarArticulo(Articulo arti)
         {
             InitializeComponent();
@@ -98,19 +115,8 @@ namespace TP2
         private void FrmCargarArticulo_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-                NegocioMarca accesoMarcas = new NegocioMarca();
-                CategoriaNegocio accesoCategorias = new CategoriaNegocio();
+            cargar();
 
-                ddlMarca.DataSource = accesoMarcas.listar();
-                ddlCategoria.DataSource = accesoCategorias.listar();
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
             
             if(articulo != null)
             {
@@ -126,7 +132,9 @@ namespace TP2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FrmAgregarMarca nuevaMarca = new FrmAgregarMarca();
+            nuevaMarca.ShowDialog();
+            cargar();
         }
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
@@ -147,6 +155,13 @@ namespace TP2
                 pbxImagenes.Load("https://miracomosehace.com/wp-content/uploads/2020/06/error-web.jpg");
 
             }
+        }
+
+        private void buttonAñadirCategoria_Click(object sender, EventArgs e)
+        {
+            FrmCargarCategoria nuevaCategoria = new FrmCargarCategoria();
+            nuevaCategoria.ShowDialog();
+            cargar();
         }
     }
 }
