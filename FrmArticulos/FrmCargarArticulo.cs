@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -96,8 +97,20 @@ namespace TP2
 
         private void FrmCargarArticulo_Load(object sender, EventArgs e)
         {
-            
 
+            try
+            {
+                NegocioMarca accesoMarcas = new NegocioMarca();
+                CategoriaNegocio accesoCategorias = new CategoriaNegocio();
+
+                ddlMarca.DataSource = accesoMarcas.listar();
+                ddlCategoria.DataSource = accesoCategorias.listar();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             
             if(articulo != null)
             {
