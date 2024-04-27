@@ -71,6 +71,11 @@ namespace TP2
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Categoria seleccionado = null;
+            if (dgvCategorias.CurrentRow is null)
+            {
+                MessageBox.Show("No hay una categoria seleccionada", "Error");
+                return;
+            }
             seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
 
             if(seleccionado == null)
@@ -88,9 +93,13 @@ namespace TP2
         {
             Categoria seleccionado = null;
             CategoriaNegocio negocio = new CategoriaNegocio();
+            if (dgvCategorias.CurrentRow is null)
+            {
+                MessageBox.Show("No hay una categoria seleccionada", "Error");
+                return;
+            }
             seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
 
-           
 
             if (seleccionado == null)
             {

@@ -85,7 +85,11 @@ namespace TP2
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea eliminar la marca?", "Eliminar Marca", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (IdEliminacion.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar una marca para poder eliminarla ");
+            }
+            else if (MessageBox.Show("¿Está seguro que desea eliminar la marca?", "Eliminar Marca", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -118,9 +122,8 @@ namespace TP2
                     {
                         MessageBox.Show(ex.Message);
                     }
-                 
                 }
-                
+
             }
 
         }
