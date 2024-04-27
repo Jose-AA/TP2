@@ -20,13 +20,9 @@ namespace negocio
 
             try
             {
-                datos.settearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio, M.Descripcion AS Marca, C.Descripcion AS Categoria, I.ImagenUrl FROM ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I where A.IdMarca = M.Id and A.IdCategoria = C.Id and I.IdArticulo = A.Id");
-                //datos.settearConsulta("SELETC A.ID, ");
-                //datos.settearConsulta("SELECT * FROM ARTICULOS");
-                //datos.settearConsulta("SELECT A.id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio, M.Descripcion AS Marca, C.Descripcion AS Categoria FROM ARTICULOS A JOIN MARCAS M ON A.IdMarca = M.Id JOIN CATEGORIAS C ON A.IdCategoria = C.Id");
-                //datos.settearConsulta("Select Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio from ARTICULOS");
+               
+                datos.settearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio, M.Descripcion AS Marca, C.Descripcion AS Categoria, I.ImagenUrl FROM ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I where A.IdMarca = M.Id and A.IdCategoria = C.Id and I.IdArticulo = A.Id ORDER BY A.Id ASC ");
                 datos.ejecutarLectura();
-
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
@@ -35,11 +31,11 @@ namespace negocio
                     aux.nombre = (string)datos.Lector["Nombre"];
                     aux.descripcion = (string)datos.Lector["Descripcion"];
                     aux.marcaArticulo = new Marca();
-                    //aux.marcaArticulo.id = (int)datos.Lector["IdMarca"];
+                    aux.marcaArticulo.id = (int)datos.Lector["IdMarca"];
                     aux.marcaArticulo.descripcion = (string)datos.Lector["Marca"];
                     aux.categoriaArticulo = new Categoria();
                     aux.categoriaArticulo.Descripcion = (string)datos.Lector["Categoria"];
-                    //aux.categoriaArticulo.ID = (string)datos.Lector["IdCategoria"];
+                    aux.categoriaArticulo.ID = (int)datos.Lector["IdCategoria"];
                     aux.precio = (decimal)datos.Lector["Precio"];
                     aux.imagenes = new List<Imagen>();
 
@@ -49,8 +45,6 @@ namespace negocio
                         ima.Url = (string)datos.Lector["ImagenUrl"];
                         aux.imagenes.Add(ima);
                     }
-
-                    //aux.urlImagen = (string)datos.Lector["ImagenUrl"];
                     
                     lista.Add(aux);
                 }
@@ -58,8 +52,8 @@ namespace negocio
             }
             catch (Exception ex)
             {
-                return lista;
-                //throw ex;
+               
+                throw ex;
             }
             finally
             {
@@ -83,7 +77,6 @@ namespace negocio
             }
             catch (Exception ex)
             {
-                // Manejo adecuado de la excepción, por ejemplo, registro de errores
                 Console.WriteLine("Error al agregar imagen: " + ex.Message);
             }
             finally
@@ -111,7 +104,7 @@ namespace negocio
             }
             catch (Exception ex)
             {
-                // Manejo adecuado de la excepción, por ejemplo, registro de errores
+                
                 Console.WriteLine("Error al modificar artículo: " + ex.Message);
             }
             finally

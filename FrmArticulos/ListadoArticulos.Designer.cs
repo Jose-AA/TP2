@@ -46,7 +46,7 @@
             // dgvListadoArticulos
             // 
             this.dgvListadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListadoArticulos.Location = new System.Drawing.Point(35, 154);
+            this.dgvListadoArticulos.Location = new System.Drawing.Point(26, 116);
             this.dgvListadoArticulos.MultiSelect = false;
             this.dgvListadoArticulos.Name = "dgvListadoArticulos";
             this.dgvListadoArticulos.ReadOnly = true;
@@ -70,7 +70,7 @@
             // 
             this.labelFiltro.AutoSize = true;
             this.labelFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFiltro.Location = new System.Drawing.Point(79, 117);
+            this.labelFiltro.Location = new System.Drawing.Point(36, 50);
             this.labelFiltro.Name = "labelFiltro";
             this.labelFiltro.Size = new System.Drawing.Size(56, 20);
             this.labelFiltro.TabIndex = 8;
@@ -79,7 +79,7 @@
             // textBoxFiltro
             // 
             this.textBoxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFiltro.Location = new System.Drawing.Point(152, 108);
+            this.textBoxFiltro.Location = new System.Drawing.Point(113, 48);
             this.textBoxFiltro.Name = "textBoxFiltro";
             this.textBoxFiltro.Size = new System.Drawing.Size(164, 40);
             this.textBoxFiltro.TabIndex = 10;
@@ -90,7 +90,7 @@
             // 
             this.buttonBuscar.BackgroundImage = global::TP2.Properties.Resources.agregar_contacto;
             this.buttonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonBuscar.Location = new System.Drawing.Point(322, 108);
+            this.buttonBuscar.Location = new System.Drawing.Point(324, 523);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(81, 40);
             this.buttonBuscar.TabIndex = 9;
@@ -103,7 +103,7 @@
             // 
             this.buttonEliminarFisicoArticulo.BackgroundImage = global::TP2.Properties.Resources.agregar_contacto;
             this.buttonEliminarFisicoArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonEliminarFisicoArticulo.Location = new System.Drawing.Point(409, 108);
+            this.buttonEliminarFisicoArticulo.Location = new System.Drawing.Point(438, 523);
             this.buttonEliminarFisicoArticulo.Name = "buttonEliminarFisicoArticulo";
             this.buttonEliminarFisicoArticulo.Size = new System.Drawing.Size(81, 40);
             this.buttonEliminarFisicoArticulo.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             this.buttonEditarArticulo.BackgroundImage = global::TP2.Properties.Resources.editar__1_;
             this.buttonEditarArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonEditarArticulo.Location = new System.Drawing.Point(496, 108);
+            this.buttonEditarArticulo.Location = new System.Drawing.Point(544, 523);
             this.buttonEditarArticulo.Name = "buttonEditarArticulo";
             this.buttonEditarArticulo.Size = new System.Drawing.Size(81, 40);
             this.buttonEditarArticulo.TabIndex = 5;
@@ -129,7 +129,7 @@
             // 
             this.buttonAgregarArticulo.BackgroundImage = global::TP2.Properties.Resources.agregar_producto;
             this.buttonAgregarArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonAgregarArticulo.Location = new System.Drawing.Point(584, 108);
+            this.buttonAgregarArticulo.Location = new System.Drawing.Point(650, 523);
             this.buttonAgregarArticulo.Name = "buttonAgregarArticulo";
             this.buttonAgregarArticulo.Size = new System.Drawing.Size(118, 40);
             this.buttonAgregarArticulo.TabIndex = 4;

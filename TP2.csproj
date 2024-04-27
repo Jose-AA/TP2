@@ -111,6 +111,7 @@
     <Compile Include="ClasesVarias\Validaciones.cs" />
     <EmbeddedResource Include="FormPrincipal\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMarcas\FrmBuscarMarca.resx">
       <DependentUpon>FrmBuscarMarca.cs</DependentUpon>

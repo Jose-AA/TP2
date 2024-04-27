@@ -79,5 +79,17 @@ namespace TP2
             ventanaListadoArticulos.ShowDialog();
 
         }
+
+        private void buscarPorNúmeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorias frmCategorias = new FrmCategorias();
+            frmCategorias.ShowDialog();
+        }
+
+        private void añadirCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorias frmCategorias = new FrmCategorias();
+            frmCategorias.ShowDialog();
+        }
     }
 }

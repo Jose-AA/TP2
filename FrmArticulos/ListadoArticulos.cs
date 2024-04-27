@@ -58,7 +58,6 @@ namespace TP2
                 dgvListadoArticulos.DataSource = listaArticulos;
                 dgvListadoArticulos.Columns["UrlImagen"].Visible = false;
 
-                // Aquí cargas la imagen del primer artículo en caso de que haya algún artículo en la lista
                 if (listaArticulos.Count > 0)
                 {
                     cargarImagen(listaArticulos[0].imagenes);
@@ -98,11 +97,29 @@ namespace TP2
 
         private void buttonEditarArticulo_Click(object sender, EventArgs e)
         {
-            Articulo seleccionado;
-            seleccionado = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
-            FrmCargarArticulo modificar = new FrmCargarArticulo(seleccionado);
-            modificar.ShowDialog();
-            actualizarListado();
+
+            if (!(dgvListadoArticulos.CurrentRow is null))
+            {
+                try
+                {
+                    Articulo seleccionado;
+                    seleccionado = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
+                    FrmCargarArticulo modificar = new FrmCargarArticulo(seleccionado);
+                    modificar.ShowDialog();
+                    actualizarListado();
+
+                }
+                catch (Exception ex)
+                {
+
+                    ex.ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay articulos seleccionados", "Error");
+            }
+            
         }
 
         private void buttonEliminarFisicoArticulo_Click(object sender, EventArgs e)
@@ -145,7 +162,7 @@ namespace TP2
 
             if (filtro != "")
             {
-                listaFiltrada = listaArticulos.FindAll(x => x.nombre.ToLower().Contains(textBoxFiltro.Text.ToLower()));
+                listaFiltrada = listaArticulos.FindAll(x => x.nombre.ToLower().Contains(textBoxFiltro.Text.ToLower()) || x.id.ToString().Contains(textBoxFiltro.Text.ToLower()) || x.marcaArticulo.descripcion.ToLower().Contains(textBoxFiltro.Text.ToLower()));
             }
             else
             {

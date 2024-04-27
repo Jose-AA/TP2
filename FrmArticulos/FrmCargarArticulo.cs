@@ -68,22 +68,17 @@ namespace TP2
                 articulo.descripcion = textBoxDescripcion.Text;
                 articulo.precio = decimal.Parse(textBoxPrecio.Text);
                 articulo.marcaArticulo = new Marca();
-                articulo.marcaArticulo.id = 1;
-                articulo.marcaArticulo.descripcion = "Sin definir";
+                articulo.marcaArticulo.id = ((Marca)ddlMarca.SelectedItem).id;
+                articulo.marcaArticulo.descripcion = ((Marca)ddlMarca.SelectedItem).descripcion;
                 articulo.categoriaArticulo = new Categoria();
-                articulo.categoriaArticulo.ID = 1;
-                articulo.categoriaArticulo.Descripcion = "Sin definir";
-                
-
+                articulo.categoriaArticulo.Descripcion = ((Categoria)ddlCategoria.SelectedItem).Descripcion;
+                articulo.categoriaArticulo.ID = ((Categoria)ddlCategoria.SelectedItem).ID;
+             
                 articulo.imagenes = new List<Imagen>();
 
                 Imagen ima = new Imagen(articulo.id, textBoxURL.Text);
 
-                articulo.imagenes.Add(ima); 
-
-                MessageBox.Show("se envio el constructor vacio correctamente");
-
-                
+                articulo.imagenes.Add(ima);                
 
                 if(!ArticuloNoexistente)
                 {
@@ -92,7 +87,9 @@ namespace TP2
                     MessageBox.Show("Articulo modificado correctamente");
                 }
                 else
-                {   MessageBox.Show("agregando ....");
+                {
+                  
+                    MessageBox.Show("agregando ....");
                     negocio.agregarImagen(articulo.id, ima.Url);
                     negocio.Agregar2(articulo);
                     MessageBox.Show("Articulo agregado correctamente");
@@ -117,16 +114,23 @@ namespace TP2
 
             cargar();
 
-            
-            if(articulo != null)
+            ddlCategoria.DisplayMember = "Descripcion";
+            ddlCategoria.ValueMember = "ID";
+
+            ddlMarca.DisplayMember = "descripcion";
+            ddlMarca.ValueMember = "id";
+
+            if (articulo != null)
             {
                 textBoxDescripcion.Text = articulo.descripcion;
                 textBoxPrecio.Text = articulo.precio.ToString();
                 txtCodigo.Text = articulo.codigo;
                 txtNombre.Text = articulo.nombre;
+                ddlMarca.SelectedValue = articulo.marcaArticulo.id;
+                ddlCategoria.SelectedValue = articulo.categoriaArticulo.ID;
+              
                 cargarImagen(articulo.imagenes[0].Url);
 
-                //pbxImagenes.Load(articulo.imagenes[0].Url);
             }
         }
 
