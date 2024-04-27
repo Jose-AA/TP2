@@ -151,7 +151,13 @@ namespace TP2
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
-            cargarImagen(textBoxURL.Text);
+            
+            Imagen ima = new Imagen(articulo.id, textBoxURL.Text);
+            articulo.imagenes.Add(ima);
+            
+
+            MessageBox.Show("Imagen cargada al articulo");
+            //cargarImagen(textBoxURL.Text);
         }
 
         private void cargarImagen(string imagen)
@@ -174,6 +180,40 @@ namespace TP2
             FrmCargarCategoria nuevaCategoria = new FrmCargarCategoria();
             nuevaCategoria.ShowDialog();
             cargar();
+        }
+
+        private void textBoxURL_TextChanged(object sender, EventArgs e)
+        {
+            string imagenUrl = textBoxURL.Text;
+
+            try
+            {
+                pbxImagenes.Load(imagenUrl);
+
+            }
+            catch (Exception ex)
+            {
+                pbxImagenes.Load("https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg");
+
+            }
+        }
+
+        private void buttonBorrarCampoUrl_Click(object sender, EventArgs e)
+        {
+            textBoxURL.Text = "";
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            int imagenActual = 0;
+
+            if(imagenActual > 0)
+            {
+                imagenActual--;
+                textBoxURL.Text = articulo.imagenes[imagenActual].Url;
+            }
+            
+            
         }
     }
 }

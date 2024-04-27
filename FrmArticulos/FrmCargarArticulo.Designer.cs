@@ -52,6 +52,7 @@
             this.btnCrearArticulo = new System.Windows.Forms.Button();
             this.btnCargarImagen = new System.Windows.Forms.Button();
             this.pbxImagenes = new System.Windows.Forms.PictureBox();
+            this.buttonBorrarCampoUrl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,6 +141,7 @@
             this.btnAnterior.TabIndex = 5;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnSiguiente
             // 
@@ -211,6 +213,7 @@
             this.textBoxURL.Name = "textBoxURL";
             this.textBoxURL.Size = new System.Drawing.Size(338, 20);
             this.textBoxURL.TabIndex = 17;
+            this.textBoxURL.TextChanged += new System.EventHandler(this.textBoxURL_TextChanged);
             // 
             // labelURL
             // 
@@ -301,6 +304,7 @@
             // pbxImagenes
             // 
             this.pbxImagenes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbxImagenes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxImagenes.Location = new System.Drawing.Point(137, 194);
             this.pbxImagenes.Name = "pbxImagenes";
             this.pbxImagenes.Size = new System.Drawing.Size(277, 278);
@@ -308,12 +312,23 @@
             this.pbxImagenes.TabIndex = 9;
             this.pbxImagenes.TabStop = false;
             // 
+            // buttonBorrarCampoUrl
+            // 
+            this.buttonBorrarCampoUrl.Location = new System.Drawing.Point(338, 564);
+            this.buttonBorrarCampoUrl.Name = "buttonBorrarCampoUrl";
+            this.buttonBorrarCampoUrl.Size = new System.Drawing.Size(75, 23);
+            this.buttonBorrarCampoUrl.TabIndex = 19;
+            this.buttonBorrarCampoUrl.Text = "Borrar campo";
+            this.buttonBorrarCampoUrl.UseVisualStyleBackColor = true;
+            this.buttonBorrarCampoUrl.Click += new System.EventHandler(this.buttonBorrarCampoUrl_Click);
+            // 
             // FrmCargarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(550, 693);
+            this.Controls.Add(this.buttonBorrarCampoUrl);
             this.Controls.Add(this.labelURL);
             this.Controls.Add(this.textBoxURL);
             this.Controls.Add(this.buttonAñadirCategoria);
@@ -373,5 +388,6 @@
         private System.Windows.Forms.Button buttonAñadirCategoria;
         private System.Windows.Forms.TextBox textBoxURL;
         private System.Windows.Forms.Label labelURL;
+        private System.Windows.Forms.Button buttonBorrarCampoUrl;
     }
 }
