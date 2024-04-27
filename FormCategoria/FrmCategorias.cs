@@ -21,6 +21,23 @@ namespace TP2
 
         private List<Categoria> listaCategorias;
 
+        private bool validarBajaCategoria(Categoria seleccionado)
+        {
+            //Para validar si existen articulos cargados antes de borrar la categoria
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            List<Articulo> articulosCargados;
+            articulosCargados = articuloNegocio.listar();
+
+            foreach (var articulo in articulosCargados)
+            {
+                if (articulo.categoriaArticulo.ID == seleccionado.ID)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
         private void cargar()
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
@@ -73,6 +90,8 @@ namespace TP2
             CategoriaNegocio negocio = new CategoriaNegocio();
             seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
 
+           
+
             if (seleccionado == null)
             {
                 MessageBox.Show("Por favor seleccione primero una categoria");
@@ -86,8 +105,19 @@ namespace TP2
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    negocio.eliminar(seleccionado);
-                    MessageBox.Show("Se ha eliminado la categoría exitosamente");
+
+                    if(validarBajaCategoria(seleccionado) == true)
+                    {
+                        negocio.eliminar(seleccionado);
+                        MessageBox.Show("Se ha eliminado la categoría exitosamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("La categoria " + seleccionado.Descripcion + " tiene articulos asociados. Por favor, modifique los artículos asociados para continuar con la baja de la categoría");
+                        return;
+                    }
+
+                    
                 }
                 else if (dialogResult == DialogResult.No)
                 {
