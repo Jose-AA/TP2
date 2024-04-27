@@ -178,7 +178,7 @@
             this.listadoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.listadoToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
             this.listadoToolStripMenuItem.Text = "Buscar";
             this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
             // 
@@ -187,7 +187,7 @@
             this.buscarPorNombreToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.buscarPorNombreToolStripMenuItem1.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNombreToolStripMenuItem1.Name = "buscarPorNombreToolStripMenuItem1";
-            this.buscarPorNombreToolStripMenuItem1.Size = new System.Drawing.Size(180, 34);
+            this.buscarPorNombreToolStripMenuItem1.Size = new System.Drawing.Size(174, 34);
             this.buscarPorNombreToolStripMenuItem1.Text = "Añadir";
             this.buscarPorNombreToolStripMenuItem1.Click += new System.EventHandler(this.buscarPorNombreToolStripMenuItem1_Click);
             // 
@@ -196,7 +196,7 @@
             this.buscarPorNúmeroToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.buscarPorNúmeroToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.buscarPorNúmeroToolStripMenuItem.Name = "buscarPorNúmeroToolStripMenuItem";
-            this.buscarPorNúmeroToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.buscarPorNúmeroToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
             this.buscarPorNúmeroToolStripMenuItem.Text = "Modificar";
             this.buscarPorNúmeroToolStripMenuItem.Click += new System.EventHandler(this.buscarPorNúmeroToolStripMenuItem_Click);
             // 
@@ -205,7 +205,7 @@
             this.añadirCategoríaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.añadirCategoríaToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.añadirCategoríaToolStripMenuItem.Name = "añadirCategoríaToolStripMenuItem";
-            this.añadirCategoríaToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.añadirCategoríaToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
             this.añadirCategoríaToolStripMenuItem.Text = "Eliminar";
             this.añadirCategoríaToolStripMenuItem.Click += new System.EventHandler(this.añadirCategoríaToolStripMenuItem_Click);
             // 
@@ -277,6 +277,7 @@
             this.toolStripButtonEliminarArticulo.Size = new System.Drawing.Size(54, 54);
             this.toolStripButtonEliminarArticulo.Text = "toolStripButton2";
             this.toolStripButtonEliminarArticulo.ToolTipText = "Eliminar artículo";
+            this.toolStripButtonEliminarArticulo.Click += new System.EventHandler(this.toolStripButtonEliminarArticulo_Click);
             // 
             // toolStripButtonEditarArticulo
             // 
@@ -287,6 +288,7 @@
             this.toolStripButtonEditarArticulo.Size = new System.Drawing.Size(54, 54);
             this.toolStripButtonEditarArticulo.Text = "toolStripButton2";
             this.toolStripButtonEditarArticulo.ToolTipText = "Modificar artículo";
+            this.toolStripButtonEditarArticulo.Click += new System.EventHandler(this.toolStripButtonEditarArticulo_Click);
             // 
             // toolStripButtonListadoArticulos
             // 
@@ -316,6 +318,7 @@
             this.toolStripButtonMarcas.Name = "toolStripButtonMarcas";
             this.toolStripButtonMarcas.Size = new System.Drawing.Size(54, 54);
             this.toolStripButtonMarcas.Text = "Marcas";
+            this.toolStripButtonMarcas.Click += new System.EventHandler(this.toolStripButtonMarcas_Click);
             // 
             // toolStripButtonCategorias
             // 
@@ -326,6 +329,7 @@
             this.toolStripButtonCategorias.Size = new System.Drawing.Size(54, 54);
             this.toolStripButtonCategorias.Text = "toolStripButton2";
             this.toolStripButtonCategorias.ToolTipText = "Categorías de artículos";
+            this.toolStripButtonCategorias.Click += new System.EventHandler(this.toolStripButtonCategorias_Click);
             // 
             // toolStripButtonLogOut
             // 

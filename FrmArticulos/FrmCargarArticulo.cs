@@ -53,6 +53,14 @@ namespace TP2
         private void btnCrearArticulo_Click(object sender, EventArgs e)
         {
             //Articulo nuevo = new Articulo();
+            if(string.IsNullOrEmpty(txtNombre.Text)) { MessageBox.Show("El nombre no puede estar vacio"); return; }
+            if (string.IsNullOrEmpty(txtCodigo.Text)) { MessageBox.Show("El codigo no puede estar vacio"); return; }
+            if (string.IsNullOrEmpty(textBoxDescripcion.Text)) { MessageBox.Show("La descripcion no puede estar vacia"); return; }
+            if (string.IsNullOrEmpty(textBoxPrecio.Text)) { MessageBox.Show("El precio no puede estar vacio"); return; }
+            if(ddlCategoria.SelectedItem == null) { MessageBox.Show("Debe seleccionar una categoria"); return; }
+            if (ddlMarca.SelectedItem == null) { MessageBox.Show("Debe seleccionar una marca"); return; }
+
+
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
