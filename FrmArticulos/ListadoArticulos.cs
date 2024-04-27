@@ -57,6 +57,7 @@ namespace TP2
 
                 dgvListadoArticulos.DataSource = listaArticulos;
                 dgvListadoArticulos.Columns["UrlImagen"].Visible = false;
+                dgvListadoArticulos.Columns["id"].Visible = false;
 
                 if (listaArticulos.Count > 0)
                 {
@@ -128,7 +129,12 @@ namespace TP2
             Articulo seleccionado;
             try
             {
-
+                if(dgvListadoArticulos.CurrentRow is null)
+                {
+                    MessageBox.Show("No hay articulos seleccionados", "Error");
+                    return;
+                }   
+                
                 DialogResult respuesta = MessageBox.Show("Confirmar borrado permanente", "Eliminar artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 
                 if(respuesta == DialogResult.Yes)
@@ -162,7 +168,7 @@ namespace TP2
 
             if (filtro != "")
             {
-                listaFiltrada = listaArticulos.FindAll(x => x.nombre.ToLower().Contains(textBoxFiltro.Text.ToLower()) || x.id.ToString().Contains(textBoxFiltro.Text.ToLower()) || x.marcaArticulo.descripcion.ToLower().Contains(textBoxFiltro.Text.ToLower()));
+                listaFiltrada = listaArticulos.FindAll(x => x.nombre.ToLower().Contains(textBoxFiltro.Text.ToLower()) || x.codigo.ToLower().Contains(textBoxFiltro.Text.ToLower()) || x.marcaArticulo.descripcion.ToLower().Contains(textBoxFiltro.Text.ToLower()) || x.categoriaArticulo.Descripcion.ToLower().Contains(textBoxFiltro.Text.ToLower()));
             }
             else
             {
@@ -173,6 +179,7 @@ namespace TP2
             dgvListadoArticulos.DataSource = null;
             dgvListadoArticulos.DataSource = listaFiltrada;
             dgvListadoArticulos.Columns["UrlImagen"].Visible = false;
+            dgvListadoArticulos.Columns["id"].Visible = false;
         }
 
         private void textBoxFiltro_TextChanged(object sender, EventArgs e)

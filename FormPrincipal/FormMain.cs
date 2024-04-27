@@ -91,5 +91,31 @@ namespace TP2
             FrmCategorias frmCategorias = new FrmCategorias();
             frmCategorias.ShowDialog();
         }
+
+        private void toolStripButtonEliminarArticulo_Click(object sender, EventArgs e)
+        {
+            ListadoArticulos ventanaListadoArticulos = new ListadoArticulos();
+            ventanaListadoArticulos.ShowDialog();
+
+        }
+
+        private void toolStripButtonEditarArticulo_Click(object sender, EventArgs e)
+        {
+            ListadoArticulos ventanaListadoArticulos = new ListadoArticulos();
+            ventanaListadoArticulos.ShowDialog();
+
+        }
+
+        private void toolStripButtonMarcas_Click(object sender, EventArgs e)
+        {
+            FrmBuscarMarca ventanaBuscarMarca = new FrmBuscarMarca();
+            ventanaBuscarMarca.ShowDialog();
+        }
+
+        private void toolStripButtonCategorias_Click(object sender, EventArgs e)
+        {
+           FrmCategorias frmCategorias = new FrmCategorias();
+            frmCategorias.ShowDialog(); 
+        }
     }
 }
