@@ -18,8 +18,10 @@ namespace TP2
 
 
         private List<Articulo> listaArticulos;
-
-
+        
+        private List<Imagen> listaImagenes;
+        private int imagenActual = 0;
+        private ArticuloNegocio Negocio = new ArticuloNegocio();
 
         public ListadoArticulos()
         {
@@ -189,7 +191,35 @@ namespace TP2
 
         private void buttonImagenDerecha_Click(object sender, EventArgs e)
         {
-            
+            Articulo seleccion = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
+            List<Imagen> listaImagenes = Negocio.generarListaImagenes(seleccion.id);
+
+            if (listaImagenes.Count > 0)
+            {
+                imagenActual++;
+                if (imagenActual >= listaImagenes.Count)
+                {
+                    imagenActual = 0;
+                }
+                pictureBoxImagenesArticulos.Load(listaImagenes[imagenActual].Url);
+            }
+        }
+
+        private void buttonImagenIzquierda_Click(object sender, EventArgs e)
+        {
+            Articulo seleccion = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
+            List<Imagen> listaImagenes = Negocio.generarListaImagenes(seleccion.id);
+
+            if (listaImagenes.Count > 0)
+            {
+                imagenActual--;
+                if (imagenActual < 0)
+                {
+                    imagenActual = listaImagenes.Count - 1;
+                }
+                pictureBoxImagenesArticulos.Load(listaImagenes[imagenActual].Url);
+            }
         }
     }
 }
+

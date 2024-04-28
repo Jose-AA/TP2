@@ -61,10 +61,7 @@ namespace negocio
             }
 
         }
-        
-        
-       
-
+        public List<Imagen> listaImagenes = new List<Imagen>();
         public void agregarImagen(int articulo, string url)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -231,6 +228,24 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Imagen> generarListaImagenes(int id)
+        {
+           
+            listaImagenes = listarImagenes();
+            List<Imagen> nuevaLista = new List<Imagen>();
+
+            foreach (Imagen item in listaImagenes)
+            {
+                if (item.IDArticulo == id)
+                {
+                    nuevaLista.Add(item);
+                }
+            }
+            return nuevaLista;
+
+        }
+
     }
 }
 

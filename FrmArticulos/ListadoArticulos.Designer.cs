@@ -158,6 +158,7 @@
             this.buttonImagenIzquierda.Size = new System.Drawing.Size(39, 35);
             this.buttonImagenIzquierda.TabIndex = 2;
             this.buttonImagenIzquierda.UseVisualStyleBackColor = true;
+            this.buttonImagenIzquierda.Click += new System.EventHandler(this.buttonImagenIzquierda_Click);
             // 
             // pictureBoxImagenesArticulos
             // 
