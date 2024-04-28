@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnSeleccionarEM = new System.Windows.Forms.Button();
@@ -111,8 +111,8 @@
             // 
             // dgvEliminarM
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Info;
-            this.dgvEliminarM.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Info;
+            this.dgvEliminarM.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEliminarM.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvEliminarM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEliminarM.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(373, 763);
+            this.ClientSize = new System.Drawing.Size(373, 749);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -168,8 +168,13 @@
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.dgvEliminarM);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(389, 788);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(389, 726);
             this.Name = "FrmEliminarMarca";
-            this.Text = "FrmEliminarMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Eliminar Marca";
             this.Load += new System.EventHandler(this.FrmEliminarMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
