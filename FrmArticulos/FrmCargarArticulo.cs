@@ -95,6 +95,7 @@ namespace TP2
                 {
                     MessageBox.Show("modificando ....");
                     negocio.modificar(articulo);
+                    negocio.agregarImagen(articulo.id, ima.Url);
                     MessageBox.Show("Articulo modificado correctamente");
                 }
                 else
@@ -164,15 +165,15 @@ namespace TP2
             ima.Url = textBoxURL.Text;
             ima.IDArticulo = IdArticuloEstimado;
             
-            //articulo.imagenes.Add(ima);
             
             
+            articulo.imagenes.Add(ima);
             negocio.agregarImagen(ima.IDArticulo, ima.Url);
 
+            cargarImagen(textBoxURL.Text);
             MessageBox.Show("Imagen cargada al articulo");
-            //cargarImagen(textBoxURL.Text);
 
-            negocio.EliminarImagenesSinArticulo();
+            //negocio.EliminarImagenesSinArticulo();
         }
 
         private void cargarImagen(string imagen)
