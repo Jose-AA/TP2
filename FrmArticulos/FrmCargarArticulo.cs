@@ -16,6 +16,7 @@ namespace TP2
     public partial class FrmCargarArticulo : Form
     {
         private Articulo articulo = null;
+        private int imagenActual = 0;
         public FrmCargarArticulo()
         {
             InitializeComponent();
@@ -151,10 +152,15 @@ namespace TP2
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            
+            
+            articulo.imagenes = new List<Imagen>();
+                
             
             Imagen ima = new Imagen(articulo.id, textBoxURL.Text);
             articulo.imagenes.Add(ima);
-            
+            negocio.agregarImagen(articulo.id, ima.Url);
 
             MessageBox.Show("Imagen cargada al articulo");
             //cargarImagen(textBoxURL.Text);
@@ -205,15 +211,15 @@ namespace TP2
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            int imagenActual = 0;
-
-            if(imagenActual > 0)
+            // Desplázate a la imagen anterior si existe una imagen anterior
+            if (imagenActual > 0)
             {
-                imagenActual--;
-                textBoxURL.Text = articulo.imagenes[imagenActual].Url;
+                imagenActual--; // Decrementa el índice de la imagen actual
+                textBoxURL.Text = articulo.imagenes[imagenActual].Url; // Actualiza textBoxURL con la nueva URL de la imagen
+                cargarImagen(articulo.imagenes[imagenActual].Url); // Carga la nueva imagen en pbxImagenes
             }
-            
-            
+
+
         }
     }
 }

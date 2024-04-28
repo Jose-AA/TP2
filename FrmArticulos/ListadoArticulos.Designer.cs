@@ -147,6 +147,7 @@
             this.buttonImagenDerecha.Size = new System.Drawing.Size(39, 35);
             this.buttonImagenDerecha.TabIndex = 3;
             this.buttonImagenDerecha.UseVisualStyleBackColor = true;
+            this.buttonImagenDerecha.Click += new System.EventHandler(this.buttonImagenDerecha_Click);
             // 
             // buttonImagenIzquierda
             // 

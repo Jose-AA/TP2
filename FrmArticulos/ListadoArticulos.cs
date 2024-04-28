@@ -186,5 +186,10 @@ namespace TP2
         {
             filtrar();
         }
+
+        private void buttonImagenDerecha_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
