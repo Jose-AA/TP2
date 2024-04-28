@@ -71,13 +71,13 @@ namespace TP2
         }
         private void cargarImagen(List<Imagen> imagen)
         {
-
+            /*
             if(imagen.Count == 0)
             {
                 pictureBoxImagenesArticulos.Load("https://miracomosehace.com/wp-content/uploads/2020/06/error-web.jpg");
                 return;
             }
-
+            */
             try
             {
                 pictureBoxImagenesArticulos.Load(imagen[0].Url);
@@ -189,7 +189,7 @@ namespace TP2
 
         private void buttonImagenDerecha_Click(object sender, EventArgs e)
         {
-           
+            
         }
     }
 }

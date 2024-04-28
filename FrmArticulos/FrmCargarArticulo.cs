@@ -16,6 +16,7 @@ namespace TP2
     public partial class FrmCargarArticulo : Form
     {
         private Articulo articulo = null;
+        private List<Imagen> listaImagenes;
         private int imagenActual = 0;
         public FrmCargarArticulo()
         {
@@ -163,7 +164,7 @@ namespace TP2
             ima.Url = textBoxURL.Text;
             ima.IDArticulo = IdArticuloEstimado;
             
-            //articulo.imagenes.Add(ima);
+            articulo.imagenes.Add(ima);
             
             
             negocio.agregarImagen(ima.IDArticulo, ima.Url);
@@ -171,7 +172,7 @@ namespace TP2
             MessageBox.Show("Imagen cargada al articulo");
             //cargarImagen(textBoxURL.Text);
 
-            negocio.EliminarImagenesSinArticulo();
+            //negocio.EliminarImagenesSinArticulo();
         }
 
         private void cargarImagen(string imagen)
@@ -219,15 +220,53 @@ namespace TP2
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            // Desplázate a la imagen anterior si existe una imagen anterior
-            if (imagenActual > 0)
+            
+            List<Imagen> lista = generarListaImagenes(articulo.id);
+
+            if(lista.Count > 0)
             {
-                imagenActual--; // Decrementa el índice de la imagen actual
-                textBoxURL.Text = articulo.imagenes[imagenActual].Url; // Actualiza textBoxURL con la nueva URL de la imagen
-                cargarImagen(articulo.imagenes[imagenActual].Url); // Carga la nueva imagen en pbxImagenes
+                imagenActual--;
+                pbxImagenes.Load(lista[imagenActual].Url);
+                
+            }
+            if (imagenActual == lista.Count)
+            {
+                pbxImagenes.Load(lista[0].Url);
             }
 
+        }
 
+        public List<Imagen> generarListaImagenes(int id)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            listaImagenes = negocio.listarImagenes();
+            List<Imagen> nuevaLista = new List<Imagen>();
+
+            foreach (Imagen item in listaImagenes)
+            {
+                if (item.IDArticulo == id)
+                {
+                    nuevaLista.Add(item);
+                }
+            }
+            return nuevaLista;
+
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            List<Imagen> lista = generarListaImagenes(articulo.id);
+
+            if (imagenActual == lista.Count)
+            {
+                pbxImagenes.Load(lista[0].Url);
+            }
+            if(lista.Count > 0)
+            {
+                imagenActual++;
+                pbxImagenes.Load(lista[imagenActual].Url);
+                
+            }
         }
     }
 }

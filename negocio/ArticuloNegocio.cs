@@ -200,6 +200,37 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Imagen> listarImagenes()
+        {
+            List<Imagen> listaImagenes = new List<Imagen>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.settearConsulta("select IdArticulo, ImagenUrl from IMAGENES");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Imagen pic = new Imagen();
+                    
+                    pic.IDArticulo = (int)datos.Lector["IdArticulo"];
+                    pic.Url = (string)datos.Lector["ImagenUrl"];
+
+                    listaImagenes.Add(pic);
+                }
+                return listaImagenes;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
 
