@@ -23,10 +23,11 @@ namespace TP2
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
             Categoria categoria = new Categoria();
-            
-            categoria.Descripcion = txtCategoria.Text;
 
-            if(categoria.Descripcion == "")
+            string descripcionCategoria = txtCategoria.Text.Trim();
+            categoria.Descripcion = descripcionCategoria;
+
+            if(string.IsNullOrEmpty(descripcionCategoria))
             {
                 MessageBox.Show("Por favor ingrese una descripción");
                 return;

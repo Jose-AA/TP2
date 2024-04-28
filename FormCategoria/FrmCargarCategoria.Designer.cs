@@ -49,6 +49,7 @@
             // txtCategoria
             // 
             this.txtCategoria.Location = new System.Drawing.Point(96, 149);
+            this.txtCategoria.MaxLength = 50;
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(135, 20);
             this.txtCategoria.TabIndex = 0;
@@ -97,6 +98,7 @@
             this.Controls.Add(this.lblTitulo);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(333, 320);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(333, 320);
             this.Name = "FrmCargarCategoria";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
