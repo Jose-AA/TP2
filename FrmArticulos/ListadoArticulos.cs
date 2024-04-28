@@ -220,6 +220,11 @@ namespace TP2
                 pictureBoxImagenesArticulos.Load(listaImagenes[imagenActual].Url);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

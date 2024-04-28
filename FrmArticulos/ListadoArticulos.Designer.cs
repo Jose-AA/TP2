@@ -32,6 +32,7 @@
             this.labelTituloCatalogo = new System.Windows.Forms.Label();
             this.labelFiltro = new System.Windows.Forms.Label();
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonEliminarFisicoArticulo = new System.Windows.Forms.Button();
             this.buttonEditarArticulo = new System.Windows.Forms.Button();
@@ -46,12 +47,12 @@
             // dgvListadoArticulos
             // 
             this.dgvListadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListadoArticulos.Location = new System.Drawing.Point(26, 116);
+            this.dgvListadoArticulos.Location = new System.Drawing.Point(23, 115);
             this.dgvListadoArticulos.MultiSelect = false;
             this.dgvListadoArticulos.Name = "dgvListadoArticulos";
             this.dgvListadoArticulos.ReadOnly = true;
             this.dgvListadoArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListadoArticulos.Size = new System.Drawing.Size(742, 363);
+            this.dgvListadoArticulos.Size = new System.Drawing.Size(644, 363);
             this.dgvListadoArticulos.TabIndex = 0;
             this.dgvListadoArticulos.SelectionChanged += new System.EventHandler(this.dgvListadoArticulos_SelectionChanged);
             // 
@@ -60,7 +61,7 @@
             this.labelTituloCatalogo.AutoSize = true;
             this.labelTituloCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTituloCatalogo.ForeColor = System.Drawing.Color.Navy;
-            this.labelTituloCatalogo.Location = new System.Drawing.Point(478, 31);
+            this.labelTituloCatalogo.Location = new System.Drawing.Point(407, 31);
             this.labelTituloCatalogo.Name = "labelTituloCatalogo";
             this.labelTituloCatalogo.Size = new System.Drawing.Size(363, 39);
             this.labelTituloCatalogo.TabIndex = 7;
@@ -70,7 +71,7 @@
             // 
             this.labelFiltro.AutoSize = true;
             this.labelFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFiltro.Location = new System.Drawing.Point(36, 50);
+            this.labelFiltro.Location = new System.Drawing.Point(21, 509);
             this.labelFiltro.Name = "labelFiltro";
             this.labelFiltro.Size = new System.Drawing.Size(56, 20);
             this.labelFiltro.TabIndex = 8;
@@ -79,18 +80,31 @@
             // textBoxFiltro
             // 
             this.textBoxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFiltro.Location = new System.Drawing.Point(113, 48);
+            this.textBoxFiltro.Location = new System.Drawing.Point(83, 500);
             this.textBoxFiltro.Name = "textBoxFiltro";
-            this.textBoxFiltro.Size = new System.Drawing.Size(164, 40);
+            this.textBoxFiltro.Size = new System.Drawing.Size(199, 40);
             this.textBoxFiltro.TabIndex = 10;
             this.textBoxFiltro.TextChanged += new System.EventHandler(this.textBoxFiltro_TextChanged);
             this.textBoxFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFiltro_KeyPress);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::TP2.Properties.Resources.cerrar_sesion__3_;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(1001, 508);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 72);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // buttonBuscar
             // 
-            this.buttonBuscar.BackgroundImage = global::TP2.Properties.Resources.agregar_contacto;
+            this.buttonBuscar.BackgroundImage = global::TP2.Properties.Resources.lupa__1_;
             this.buttonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonBuscar.Location = new System.Drawing.Point(324, 523);
+            this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBuscar.Location = new System.Drawing.Point(288, 500);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(81, 40);
             this.buttonBuscar.TabIndex = 9;
@@ -101,9 +115,10 @@
             // 
             // buttonEliminarFisicoArticulo
             // 
-            this.buttonEliminarFisicoArticulo.BackgroundImage = global::TP2.Properties.Resources.agregar_contacto;
+            this.buttonEliminarFisicoArticulo.BackgroundImage = global::TP2.Properties.Resources.borrar__1_;
             this.buttonEliminarFisicoArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonEliminarFisicoArticulo.Location = new System.Drawing.Point(438, 523);
+            this.buttonEliminarFisicoArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEliminarFisicoArticulo.Location = new System.Drawing.Point(375, 500);
             this.buttonEliminarFisicoArticulo.Name = "buttonEliminarFisicoArticulo";
             this.buttonEliminarFisicoArticulo.Size = new System.Drawing.Size(81, 40);
             this.buttonEliminarFisicoArticulo.TabIndex = 6;
@@ -114,9 +129,10 @@
             // 
             // buttonEditarArticulo
             // 
-            this.buttonEditarArticulo.BackgroundImage = global::TP2.Properties.Resources.editar__1_;
+            this.buttonEditarArticulo.BackgroundImage = global::TP2.Properties.Resources.lapiz__2_;
             this.buttonEditarArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonEditarArticulo.Location = new System.Drawing.Point(544, 523);
+            this.buttonEditarArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEditarArticulo.Location = new System.Drawing.Point(462, 499);
             this.buttonEditarArticulo.Name = "buttonEditarArticulo";
             this.buttonEditarArticulo.Size = new System.Drawing.Size(81, 40);
             this.buttonEditarArticulo.TabIndex = 5;
@@ -127,9 +143,10 @@
             // 
             // buttonAgregarArticulo
             // 
-            this.buttonAgregarArticulo.BackgroundImage = global::TP2.Properties.Resources.agregar_producto;
+            this.buttonAgregarArticulo.BackgroundImage = global::TP2.Properties.Resources.producto;
             this.buttonAgregarArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonAgregarArticulo.Location = new System.Drawing.Point(650, 523);
+            this.buttonAgregarArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAgregarArticulo.Location = new System.Drawing.Point(549, 499);
             this.buttonAgregarArticulo.Name = "buttonAgregarArticulo";
             this.buttonAgregarArticulo.Size = new System.Drawing.Size(118, 40);
             this.buttonAgregarArticulo.TabIndex = 4;
@@ -140,22 +157,24 @@
             // 
             // buttonImagenDerecha
             // 
-            this.buttonImagenDerecha.BackgroundImage = global::TP2.Properties.Resources.agregar_contacto;
+            this.buttonImagenDerecha.BackgroundImage = global::TP2.Properties.Resources.flecha_correcta__1_;
             this.buttonImagenDerecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonImagenDerecha.Location = new System.Drawing.Point(1154, 241);
+            this.buttonImagenDerecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonImagenDerecha.Location = new System.Drawing.Point(929, 385);
             this.buttonImagenDerecha.Name = "buttonImagenDerecha";
-            this.buttonImagenDerecha.Size = new System.Drawing.Size(39, 35);
+            this.buttonImagenDerecha.Size = new System.Drawing.Size(48, 43);
             this.buttonImagenDerecha.TabIndex = 3;
             this.buttonImagenDerecha.UseVisualStyleBackColor = true;
             this.buttonImagenDerecha.Click += new System.EventHandler(this.buttonImagenDerecha_Click);
             // 
             // buttonImagenIzquierda
             // 
-            this.buttonImagenIzquierda.BackgroundImage = global::TP2.Properties.Resources.agregar_usuario;
+            this.buttonImagenIzquierda.BackgroundImage = global::TP2.Properties.Resources.flechas_izquierdas;
             this.buttonImagenIzquierda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonImagenIzquierda.Location = new System.Drawing.Point(783, 241);
+            this.buttonImagenIzquierda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonImagenIzquierda.Location = new System.Drawing.Point(855, 385);
             this.buttonImagenIzquierda.Name = "buttonImagenIzquierda";
-            this.buttonImagenIzquierda.Size = new System.Drawing.Size(39, 35);
+            this.buttonImagenIzquierda.Size = new System.Drawing.Size(48, 43);
             this.buttonImagenIzquierda.TabIndex = 2;
             this.buttonImagenIzquierda.UseVisualStyleBackColor = true;
             this.buttonImagenIzquierda.Click += new System.EventHandler(this.buttonImagenIzquierda_Click);
@@ -163,7 +182,7 @@
             // pictureBoxImagenesArticulos
             // 
             this.pictureBoxImagenesArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxImagenesArticulos.Location = new System.Drawing.Point(828, 136);
+            this.pictureBoxImagenesArticulos.Location = new System.Drawing.Point(757, 136);
             this.pictureBoxImagenesArticulos.Name = "pictureBoxImagenesArticulos";
             this.pictureBoxImagenesArticulos.Size = new System.Drawing.Size(320, 243);
             this.pictureBoxImagenesArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,7 +194,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1209, 601);
+            this.ClientSize = new System.Drawing.Size(1099, 601);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.labelFiltro);
@@ -210,5 +230,6 @@
         private System.Windows.Forms.Label labelFiltro;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.TextBox textBoxFiltro;
+        private System.Windows.Forms.Button button1;
     }
 }

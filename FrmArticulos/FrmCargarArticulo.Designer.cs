@@ -36,8 +36,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
-            this.btnAnterior = new System.Windows.Forms.Button();
-            this.btnSiguiente = new System.Windows.Forms.Button();
             this.ddlMarca = new System.Windows.Forms.ComboBox();
             this.ddlCategoria = new System.Windows.Forms.ComboBox();
             this.labelPrecio = new System.Windows.Forms.Label();
@@ -46,13 +44,15 @@
             this.labelCategoriaNueva = new System.Windows.Forms.Label();
             this.textBoxURL = new System.Windows.Forms.TextBox();
             this.labelURL = new System.Windows.Forms.Label();
+            this.buttonBorrarCampoUrl = new System.Windows.Forms.Button();
             this.buttonAñadirCategoria = new System.Windows.Forms.Button();
             this.buttonAñadirMarca = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.btnCrearArticulo = new System.Windows.Forms.Button();
             this.btnCargarImagen = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.btnAnterior = new System.Windows.Forms.Button();
             this.pbxImagenes = new System.Windows.Forms.PictureBox();
-            this.buttonBorrarCampoUrl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,28 +132,6 @@
             this.textBoxDescripcion.Size = new System.Drawing.Size(121, 20);
             this.textBoxDescripcion.TabIndex = 4;
             // 
-            // btnAnterior
-            // 
-            this.btnAnterior.ForeColor = System.Drawing.Color.Navy;
-            this.btnAnterior.Location = new System.Drawing.Point(137, 478);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(75, 23);
-            this.btnAnterior.TabIndex = 5;
-            this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.UseVisualStyleBackColor = true;
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
-            // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.ForeColor = System.Drawing.Color.Navy;
-            this.btnSiguiente.Location = new System.Drawing.Point(340, 478);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
-            this.btnSiguiente.TabIndex = 6;
-            this.btnSiguiente.Text = "Siguiente";
-            this.btnSiguiente.UseVisualStyleBackColor = true;
-            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
-            // 
             // ddlMarca
             // 
             this.ddlMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -226,9 +204,22 @@
             this.labelURL.TabIndex = 18;
             this.labelURL.Text = "URL";
             // 
+            // buttonBorrarCampoUrl
+            // 
+            this.buttonBorrarCampoUrl.BackgroundImage = global::TP2.Properties.Resources.eliminar__2_;
+            this.buttonBorrarCampoUrl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonBorrarCampoUrl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBorrarCampoUrl.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.buttonBorrarCampoUrl.Location = new System.Drawing.Point(464, 533);
+            this.buttonBorrarCampoUrl.Name = "buttonBorrarCampoUrl";
+            this.buttonBorrarCampoUrl.Size = new System.Drawing.Size(29, 26);
+            this.buttonBorrarCampoUrl.TabIndex = 19;
+            this.buttonBorrarCampoUrl.UseVisualStyleBackColor = true;
+            this.buttonBorrarCampoUrl.Click += new System.EventHandler(this.buttonBorrarCampoUrl_Click);
+            // 
             // buttonAñadirCategoria
             // 
-            this.buttonAñadirCategoria.BackgroundImage = global::TP2.Properties.Resources.categorias;
+            this.buttonAñadirCategoria.BackgroundImage = global::TP2.Properties.Resources.categorias__2_;
             this.buttonAñadirCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonAñadirCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAñadirCategoria.ForeColor = System.Drawing.Color.Navy;
@@ -244,7 +235,7 @@
             // buttonAñadirMarca
             // 
             this.buttonAñadirMarca.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonAñadirMarca.BackgroundImage = global::TP2.Properties.Resources.imagen_de_marca;
+            this.buttonAñadirMarca.BackgroundImage = global::TP2.Properties.Resources.imagen_de_marca1;
             this.buttonAñadirMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonAñadirMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAñadirMarca.ForeColor = System.Drawing.Color.Navy;
@@ -291,16 +282,40 @@
             // 
             // btnCargarImagen
             // 
+            this.btnCargarImagen.BackgroundImage = global::TP2.Properties.Resources.foto;
             this.btnCargarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCargarImagen.ForeColor = System.Drawing.Color.Navy;
-            this.btnCargarImagen.Location = new System.Drawing.Point(240, 563);
+            this.btnCargarImagen.Location = new System.Drawing.Point(256, 563);
             this.btnCargarImagen.Name = "btnCargarImagen";
-            this.btnCargarImagen.Size = new System.Drawing.Size(91, 39);
+            this.btnCargarImagen.Size = new System.Drawing.Size(40, 39);
             this.btnCargarImagen.TabIndex = 7;
-            this.btnCargarImagen.Text = "Cargar";
             this.btnCargarImagen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCargarImagen.UseVisualStyleBackColor = true;
             this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
+            // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.BackgroundImage = global::TP2.Properties.Resources.flecha_correcta__1_;
+            this.btnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSiguiente.ForeColor = System.Drawing.Color.Navy;
+            this.btnSiguiente.Location = new System.Drawing.Point(317, 478);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(41, 41);
+            this.btnSiguiente.TabIndex = 6;
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.BackgroundImage = global::TP2.Properties.Resources.flechas_izquierdas;
+            this.btnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAnterior.ForeColor = System.Drawing.Color.Navy;
+            this.btnAnterior.Location = new System.Drawing.Point(196, 478);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(41, 41);
+            this.btnAnterior.TabIndex = 5;
+            this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // pbxImagenes
             // 
@@ -312,16 +327,6 @@
             this.pbxImagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagenes.TabIndex = 9;
             this.pbxImagenes.TabStop = false;
-            // 
-            // buttonBorrarCampoUrl
-            // 
-            this.buttonBorrarCampoUrl.Location = new System.Drawing.Point(338, 564);
-            this.buttonBorrarCampoUrl.Name = "buttonBorrarCampoUrl";
-            this.buttonBorrarCampoUrl.Size = new System.Drawing.Size(75, 23);
-            this.buttonBorrarCampoUrl.TabIndex = 19;
-            this.buttonBorrarCampoUrl.Text = "Borrar campo";
-            this.buttonBorrarCampoUrl.UseVisualStyleBackColor = true;
-            this.buttonBorrarCampoUrl.Click += new System.EventHandler(this.buttonBorrarCampoUrl_Click);
             // 
             // FrmCargarArticulo
             // 
