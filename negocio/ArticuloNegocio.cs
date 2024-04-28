@@ -182,5 +182,26 @@ namespace negocio
             }
         }
 
+        public void EliminarImagenesSinArticulo()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.settearConsulta("DELETE FROM IMAGENES WHERE IdArticulo NOT IN (SELECT Id FROM ARTICULOS)");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                // Manejo adecuado de la excepción, por ejemplo, registro de errores
+                Console.WriteLine("Error al eliminar imágenes sin artículo: " + ex.Message);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
+
+
+

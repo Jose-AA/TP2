@@ -82,6 +82,7 @@ namespace TP2
                 articulo.categoriaArticulo = new Categoria();
                 articulo.categoriaArticulo.Descripcion = ((Categoria)ddlCategoria.SelectedItem).Descripcion;
                 articulo.categoriaArticulo.ID = ((Categoria)ddlCategoria.SelectedItem).ID;
+
              
                 articulo.imagenes = new List<Imagen>();
 
@@ -152,18 +153,25 @@ namespace TP2
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
+             
             ArticuloNegocio negocio = new ArticuloNegocio();
-            
-            
-            articulo.imagenes = new List<Imagen>();
+            int IdArticuloEstimado = negocio.UltimoArticuloRegistrado();
                 
             
-            Imagen ima = new Imagen(articulo.id, textBoxURL.Text);
-            articulo.imagenes.Add(ima);
-            negocio.agregarImagen(articulo.id, ima.Url);
+            Imagen ima = new Imagen();
+
+            ima.Url = textBoxURL.Text;
+            ima.IDArticulo = IdArticuloEstimado;
+            
+            //articulo.imagenes.Add(ima);
+            
+            
+            negocio.agregarImagen(ima.IDArticulo, ima.Url);
 
             MessageBox.Show("Imagen cargada al articulo");
             //cargarImagen(textBoxURL.Text);
+
+            negocio.EliminarImagenesSinArticulo();
         }
 
         private void cargarImagen(string imagen)
