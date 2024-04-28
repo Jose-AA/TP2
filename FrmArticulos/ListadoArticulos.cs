@@ -194,15 +194,28 @@ namespace TP2
             Articulo seleccion = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
             List<Imagen> listaImagenes = Negocio.generarListaImagenes(seleccion.id);
 
-            if (listaImagenes.Count > 0)
+
+
+            try
             {
-                imagenActual++;
-                if (imagenActual >= listaImagenes.Count)
+                if (listaImagenes.Count > 0)
                 {
-                    imagenActual = 0;
+                    imagenActual++;
+                    if (imagenActual >= listaImagenes.Count)
+                    {
+                        imagenActual = 0;
+                    }
+                    pictureBoxImagenesArticulos.Load(listaImagenes[imagenActual].Url);
                 }
-                pictureBoxImagenesArticulos.Load(listaImagenes[imagenActual].Url);
             }
+            catch (Exception ex)
+            {
+                pictureBoxImagenesArticulos.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2M2diJJpxg3MzhWDaIGVGSFLQdYJrElwI9gDAecHbQ&s");
+                //MessageBox.Show(ex.ToString());
+            }
+
+
+            
         }
 
         private void buttonImagenIzquierda_Click(object sender, EventArgs e)
@@ -210,6 +223,9 @@ namespace TP2
             Articulo seleccion = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
             List<Imagen> listaImagenes = Negocio.generarListaImagenes(seleccion.id);
 
+
+            try
+            {
             if (listaImagenes.Count > 0)
             {
                 imagenActual--;
@@ -218,6 +234,14 @@ namespace TP2
                     imagenActual = listaImagenes.Count - 1;
                 }
                 pictureBoxImagenesArticulos.Load(listaImagenes[imagenActual].Url);
+            }
+
+            }
+            catch (Exception)
+            {
+                pictureBoxImagenesArticulos.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2M2diJJpxg3MzhWDaIGVGSFLQdYJrElwI9gDAecHbQ&s");
+                //MessageBox.Show(ex.ToString());
+                
             }
         }
 

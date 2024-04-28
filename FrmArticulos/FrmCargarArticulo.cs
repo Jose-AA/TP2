@@ -222,7 +222,8 @@ namespace TP2
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             List<Imagen> lista = negocio.generarListaImagenes(articulo.id);
-
+            try
+            {
             if (lista.Count > 0)
             {
                 imagenActual--;
@@ -234,6 +235,14 @@ namespace TP2
                 pbxImagenes.Load(lista[imagenActual].Url);
             }
 
+            }
+            catch (Exception ex)
+            {
+
+                pbxImagenes.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2M2diJJpxg3MzhWDaIGVGSFLQdYJrElwI9gDAecHbQ&s");
+                //MessageBox.Show(ex.ToString());
+            }
+
         }
 
         
@@ -242,7 +251,8 @@ namespace TP2
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             List<Imagen> lista = negocio.generarListaImagenes(articulo.id);
-            
+            try
+            {
             if (lista.Count > 0)
             {
                 imagenActual++;
@@ -251,6 +261,14 @@ namespace TP2
                     imagenActual = 0;
                 }
                 pbxImagenes.Load(lista[imagenActual].Url);
+            }
+
+            }
+            catch (Exception ex)
+            {
+
+                pbxImagenes.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2M2diJJpxg3MzhWDaIGVGSFLQdYJrElwI9gDAecHbQ&s");
+                MessageBox.Show("Nada para mostrar");
             }
         }
     }
