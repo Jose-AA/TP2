@@ -321,5 +321,47 @@
       <Name>negocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen-de-marca %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen-de-marca1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechas-izquierdas %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechas-izquierdas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-correcta %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lapiz %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

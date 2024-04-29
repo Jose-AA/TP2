@@ -61,10 +61,7 @@ namespace negocio
             }
 
         }
-        
-        
-       
-
+        public List<Imagen> listaImagenes = new List<Imagen>();
         public void agregarImagen(int articulo, string url)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -182,5 +179,75 @@ namespace negocio
             }
         }
 
+        public void EliminarImagenesSinArticulo()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.settearConsulta("DELETE FROM IMAGENES WHERE IdArticulo NOT IN (SELECT Id FROM ARTICULOS)");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                // Manejo adecuado de la excepción, por ejemplo, registro de errores
+                Console.WriteLine("Error al eliminar imágenes sin artículo: " + ex.Message);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Imagen> listarImagenes()
+        {
+            List<Imagen> listaImagenes = new List<Imagen>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.settearConsulta("select IdArticulo, ImagenUrl from IMAGENES");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Imagen pic = new Imagen();
+                    
+                    pic.IDArticulo = (int)datos.Lector["IdArticulo"];
+                    pic.Url = (string)datos.Lector["ImagenUrl"];
+
+                    listaImagenes.Add(pic);
+                }
+                return listaImagenes;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Imagen> generarListaImagenes(int id)
+        {
+           
+            listaImagenes = listarImagenes();
+            List<Imagen> nuevaLista = new List<Imagen>();
+
+            foreach (Imagen item in listaImagenes)
+            {
+                if (item.IDArticulo == id)
+                {
+                    nuevaLista.Add(item);
+                }
+            }
+            return nuevaLista;
+
+        }
+
     }
 }
+
+
+

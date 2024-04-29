@@ -16,6 +16,9 @@ namespace TP2
     public partial class FrmCargarArticulo : Form
     {
         private Articulo articulo = null;
+        private List<Imagen> listaImagenes;
+        private int imagenActual = 0;
+        bool nuevoArticulo = false;
         public FrmCargarArticulo()
         {
             InitializeComponent();
@@ -47,6 +50,8 @@ namespace TP2
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
+            ArticuloNegocio acceso = new ArticuloNegocio();
+            acceso.EliminarImagenesSinArticulo();
             this.Close();
         }
 
@@ -59,39 +64,33 @@ namespace TP2
             if (string.IsNullOrEmpty(textBoxPrecio.Text)) { MessageBox.Show("El precio no puede estar vacio"); return; }
             if(ddlCategoria.SelectedItem == null) { MessageBox.Show("Debe seleccionar una categoria"); return; }
             if (ddlMarca.SelectedItem == null) { MessageBox.Show("Debe seleccionar una marca"); return; }
+            
 
 
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                bool ArticuloNoexistente = false;
-                if (articulo == null) { 
-                articulo = new Articulo();
-                ArticuloNoexistente = true;
-                    articulo.id = negocio.UltimoArticuloRegistrado();
-                }
-
+                
                 articulo.nombre = txtNombre.Text;
                 articulo.codigo = txtCodigo.Text;
                 articulo.descripcion = textBoxDescripcion.Text;
-                articulo.precio = decimal.Parse(textBoxPrecio.Text);
                 articulo.marcaArticulo = new Marca();
                 articulo.marcaArticulo.id = ((Marca)ddlMarca.SelectedItem).id;
                 articulo.marcaArticulo.descripcion = ((Marca)ddlMarca.SelectedItem).descripcion;
                 articulo.categoriaArticulo = new Categoria();
                 articulo.categoriaArticulo.Descripcion = ((Categoria)ddlCategoria.SelectedItem).Descripcion;
                 articulo.categoriaArticulo.ID = ((Categoria)ddlCategoria.SelectedItem).ID;
-             
-                articulo.imagenes = new List<Imagen>();
-
+                    articulo.precio = decimal.Parse(textBoxPrecio.Text);
+                
                 Imagen ima = new Imagen(articulo.id, textBoxURL.Text);
 
                 articulo.imagenes.Add(ima);                
 
-                if(!ArticuloNoexistente)
+                if(nuevoArticulo == false)
                 {
                     MessageBox.Show("modificando ....");
                     negocio.modificar(articulo);
+                    negocio.agregarImagen(articulo.id, ima.Url);
                     MessageBox.Show("Articulo modificado correctamente");
                 }
                 else
@@ -101,9 +100,16 @@ namespace TP2
                     negocio.agregarImagen(articulo.id, ima.Url);
                     negocio.Agregar2(articulo);
                     MessageBox.Show("Articulo agregado correctamente");
+                    nuevoArticulo = false;
                 }
+                    //listaImagenes.Clear();
 
                 
+
+            }
+            catch(FormatException ex)
+            {
+                MessageBox.Show("Solo puede ingresar números en el campo de precio");
 
             }
             catch (Exception ex)
@@ -119,7 +125,7 @@ namespace TP2
 
         private void FrmCargarArticulo_Load(object sender, EventArgs e)
         {
-
+            this.ControlBox = false;
             cargar();
 
             ddlCategoria.DisplayMember = "Descripcion";
@@ -140,6 +146,14 @@ namespace TP2
                 cargarImagen(articulo.imagenes[0].Url);
 
             }
+            else
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                articulo = new Articulo();
+                articulo.imagenes = new List<Imagen>();
+                articulo.id = negocio.UltimoArticuloRegistrado();
+                nuevoArticulo = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -151,7 +165,25 @@ namespace TP2
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
+             
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            int IdArticuloEstimado = negocio.UltimoArticuloRegistrado();
+                
+            
+            Imagen ima = new Imagen();
+
+            ima.Url = textBoxURL.Text;
+            ima.IDArticulo = IdArticuloEstimado;
+            
+            
+            
+            articulo.imagenes.Add(ima);
+            negocio.agregarImagen(ima.IDArticulo, ima.Url);
+
             cargarImagen(textBoxURL.Text);
+            MessageBox.Show("Imagen cargada al articulo");
+
+            //negocio.EliminarImagenesSinArticulo();
         }
 
         private void cargarImagen(string imagen)
@@ -174,6 +206,81 @@ namespace TP2
             FrmCargarCategoria nuevaCategoria = new FrmCargarCategoria();
             nuevaCategoria.ShowDialog();
             cargar();
+        }
+
+        private void textBoxURL_TextChanged(object sender, EventArgs e)
+        {
+            string imagenUrl = textBoxURL.Text;
+
+            try
+            {
+                pbxImagenes.Load(imagenUrl);
+
+            }
+            catch (Exception ex)
+            {
+                pbxImagenes.Load("https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg");
+
+            }
+        }
+
+        private void buttonBorrarCampoUrl_Click(object sender, EventArgs e)
+        {
+            textBoxURL.Text = "";
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Imagen> lista = negocio.generarListaImagenes(articulo.id);
+            try
+            {
+            if (lista.Count > 0)
+            {
+                imagenActual--;
+
+                if (imagenActual < 0)
+                {
+                    imagenActual = lista.Count - 1;
+                }
+                pbxImagenes.Load(lista[imagenActual].Url);
+            }
+
+            }
+            catch (Exception ex)
+            {
+
+                pbxImagenes.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2M2diJJpxg3MzhWDaIGVGSFLQdYJrElwI9gDAecHbQ&s");
+                //MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Imagen> lista = negocio.generarListaImagenes(articulo.id);
+            try
+            {
+            if (lista.Count > 0)
+            {
+                imagenActual++;
+                if (imagenActual >= lista.Count)
+                {
+                    imagenActual = 0;
+                }
+                pbxImagenes.Load(lista[imagenActual].Url);
+            }
+
+            }
+            catch (Exception ex)
+            {
+
+                pbxImagenes.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2M2diJJpxg3MzhWDaIGVGSFLQdYJrElwI9gDAecHbQ&s");
+                MessageBox.Show("Nada para mostrar");
+            }
         }
     }
 }

@@ -18,8 +18,10 @@ namespace TP2
 
 
         private List<Articulo> listaArticulos;
-
-
+        
+        private List<Imagen> listaImagenes;
+        private int imagenActual = 0;
+        private ArticuloNegocio Negocio = new ArticuloNegocio();
 
         public ListadoArticulos()
         {
@@ -71,13 +73,13 @@ namespace TP2
         }
         private void cargarImagen(List<Imagen> imagen)
         {
-
+            /*
             if(imagen.Count == 0)
             {
                 pictureBoxImagenesArticulos.Load("https://miracomosehace.com/wp-content/uploads/2020/06/error-web.jpg");
                 return;
             }
-
+            */
             try
             {
                 pictureBoxImagenesArticulos.Load(imagen[0].Url);
@@ -91,6 +93,7 @@ namespace TP2
 
         private void buttonAgregarArticulo_Click(object sender, EventArgs e)
         {
+            
             FrmCargarArticulo form = new FrmCargarArticulo();
             form.ShowDialog();
             actualizarListado();
@@ -186,5 +189,67 @@ namespace TP2
         {
             filtrar();
         }
+
+        private void buttonImagenDerecha_Click(object sender, EventArgs e)
+        {
+            Articulo seleccion = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
+            List<Imagen> listaImagenes = Negocio.generarListaImagenes(seleccion.id);
+
+
+
+            try
+            {
+                if (listaImagenes.Count > 0)
+                {
+                    imagenActual++;
+                    if (imagenActual >= listaImagenes.Count)
+                    {
+                        imagenActual = 0;
+                    }
+                    pictureBoxImagenesArticulos.Load(listaImagenes[imagenActual].Url);
+                }
+            }
+            catch (Exception ex)
+            {
+                pictureBoxImagenesArticulos.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2M2diJJpxg3MzhWDaIGVGSFLQdYJrElwI9gDAecHbQ&s");
+                //MessageBox.Show(ex.ToString());
+            }
+
+
+            
+        }
+
+        private void buttonImagenIzquierda_Click(object sender, EventArgs e)
+        {
+            Articulo seleccion = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
+            List<Imagen> listaImagenes = Negocio.generarListaImagenes(seleccion.id);
+
+
+            try
+            {
+            if (listaImagenes.Count > 0)
+            {
+                imagenActual--;
+                if (imagenActual < 0)
+                {
+                    imagenActual = listaImagenes.Count - 1;
+                }
+                pictureBoxImagenesArticulos.Load(listaImagenes[imagenActual].Url);
+            }
+
+            }
+            catch (Exception)
+            {
+                pictureBoxImagenesArticulos.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2M2diJJpxg3MzhWDaIGVGSFLQdYJrElwI9gDAecHbQ&s");
+                //MessageBox.Show(ex.ToString());
+                
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
+

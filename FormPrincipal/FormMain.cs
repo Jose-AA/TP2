@@ -25,12 +25,14 @@ namespace TP2
 
         private void añadirArtículoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
             FrmCargarArticulo ventanaCargaArticulo = new FrmCargarArticulo();
             ventanaCargaArticulo.ShowDialog();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            
             FrmCargarArticulo ventanaCargaArticulo = new FrmCargarArticulo();
             ventanaCargaArticulo.ShowDialog();
         }
