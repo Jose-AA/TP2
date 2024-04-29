@@ -64,6 +64,7 @@ namespace TP2
             if (string.IsNullOrEmpty(textBoxPrecio.Text)) { MessageBox.Show("El precio no puede estar vacio"); return; }
             if(ddlCategoria.SelectedItem == null) { MessageBox.Show("Debe seleccionar una categoria"); return; }
             if (ddlMarca.SelectedItem == null) { MessageBox.Show("Debe seleccionar una marca"); return; }
+            
 
 
             ArticuloNegocio negocio = new ArticuloNegocio();
@@ -73,15 +74,14 @@ namespace TP2
                 articulo.nombre = txtNombre.Text;
                 articulo.codigo = txtCodigo.Text;
                 articulo.descripcion = textBoxDescripcion.Text;
-                articulo.precio = decimal.Parse(textBoxPrecio.Text);
                 articulo.marcaArticulo = new Marca();
                 articulo.marcaArticulo.id = ((Marca)ddlMarca.SelectedItem).id;
                 articulo.marcaArticulo.descripcion = ((Marca)ddlMarca.SelectedItem).descripcion;
                 articulo.categoriaArticulo = new Categoria();
                 articulo.categoriaArticulo.Descripcion = ((Categoria)ddlCategoria.SelectedItem).Descripcion;
                 articulo.categoriaArticulo.ID = ((Categoria)ddlCategoria.SelectedItem).ID;
-
-
+                    articulo.precio = decimal.Parse(textBoxPrecio.Text);
+                
                 Imagen ima = new Imagen(articulo.id, textBoxURL.Text);
 
                 articulo.imagenes.Add(ima);                
@@ -102,8 +102,14 @@ namespace TP2
                     MessageBox.Show("Articulo agregado correctamente");
                     nuevoArticulo = false;
                 }
+                    //listaImagenes.Clear();
 
                 
+
+            }
+            catch(FormatException ex)
+            {
+                MessageBox.Show("Solo puede ingresar números en el campo de precio");
 
             }
             catch (Exception ex)

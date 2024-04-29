@@ -53,6 +53,7 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.pbxImagenes = new System.Windows.Forms.PictureBox();
+            this.labelRecordatorioImagenes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,7 +189,7 @@
             // 
             // textBoxURL
             // 
-            this.textBoxURL.Location = new System.Drawing.Point(120, 537);
+            this.textBoxURL.Location = new System.Drawing.Point(104, 478);
             this.textBoxURL.Name = "textBoxURL";
             this.textBoxURL.Size = new System.Drawing.Size(338, 20);
             this.textBoxURL.TabIndex = 17;
@@ -198,7 +199,7 @@
             // 
             this.labelURL.AutoSize = true;
             this.labelURL.ForeColor = System.Drawing.Color.Navy;
-            this.labelURL.Location = new System.Drawing.Point(85, 540);
+            this.labelURL.Location = new System.Drawing.Point(69, 481);
             this.labelURL.Name = "labelURL";
             this.labelURL.Size = new System.Drawing.Size(29, 13);
             this.labelURL.TabIndex = 18;
@@ -210,7 +211,7 @@
             this.buttonBorrarCampoUrl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonBorrarCampoUrl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBorrarCampoUrl.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.buttonBorrarCampoUrl.Location = new System.Drawing.Point(464, 533);
+            this.buttonBorrarCampoUrl.Location = new System.Drawing.Point(448, 474);
             this.buttonBorrarCampoUrl.Name = "buttonBorrarCampoUrl";
             this.buttonBorrarCampoUrl.Size = new System.Drawing.Size(29, 26);
             this.buttonBorrarCampoUrl.TabIndex = 19;
@@ -254,7 +255,7 @@
             this.buttonCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.ForeColor = System.Drawing.Color.Navy;
-            this.buttonCancelar.Location = new System.Drawing.Point(346, 621);
+            this.buttonCancelar.Location = new System.Drawing.Point(340, 574);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(109, 66);
             this.buttonCancelar.TabIndex = 10;
@@ -271,7 +272,7 @@
             this.btnCrearArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearArticulo.ForeColor = System.Drawing.Color.Navy;
             this.btnCrearArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearArticulo.Location = new System.Drawing.Point(88, 621);
+            this.btnCrearArticulo.Location = new System.Drawing.Point(82, 574);
             this.btnCrearArticulo.Name = "btnCrearArticulo";
             this.btnCrearArticulo.Size = new System.Drawing.Size(109, 66);
             this.btnCrearArticulo.TabIndex = 8;
@@ -285,7 +286,7 @@
             this.btnCargarImagen.BackgroundImage = global::TP2.Properties.Resources.foto;
             this.btnCargarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCargarImagen.ForeColor = System.Drawing.Color.Navy;
-            this.btnCargarImagen.Location = new System.Drawing.Point(256, 563);
+            this.btnCargarImagen.Location = new System.Drawing.Point(248, 504);
             this.btnCargarImagen.Name = "btnCargarImagen";
             this.btnCargarImagen.Size = new System.Drawing.Size(40, 39);
             this.btnCargarImagen.TabIndex = 7;
@@ -298,7 +299,7 @@
             this.btnSiguiente.BackgroundImage = global::TP2.Properties.Resources.flecha_correcta__1_;
             this.btnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSiguiente.ForeColor = System.Drawing.Color.Navy;
-            this.btnSiguiente.Location = new System.Drawing.Point(317, 478);
+            this.btnSiguiente.Location = new System.Drawing.Point(420, 312);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(41, 41);
             this.btnSiguiente.TabIndex = 6;
@@ -310,7 +311,7 @@
             this.btnAnterior.BackgroundImage = global::TP2.Properties.Resources.flechas_izquierdas;
             this.btnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAnterior.ForeColor = System.Drawing.Color.Navy;
-            this.btnAnterior.Location = new System.Drawing.Point(196, 478);
+            this.btnAnterior.Location = new System.Drawing.Point(90, 312);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(41, 41);
             this.btnAnterior.TabIndex = 5;
@@ -328,12 +329,22 @@
             this.pbxImagenes.TabIndex = 9;
             this.pbxImagenes.TabStop = false;
             // 
+            // labelRecordatorioImagenes
+            // 
+            this.labelRecordatorioImagenes.AutoSize = true;
+            this.labelRecordatorioImagenes.Location = new System.Drawing.Point(184, 546);
+            this.labelRecordatorioImagenes.Name = "labelRecordatorioImagenes";
+            this.labelRecordatorioImagenes.Size = new System.Drawing.Size(174, 13);
+            this.labelRecordatorioImagenes.TabIndex = 20;
+            this.labelRecordatorioImagenes.Text = "*Puede cargar más de una imagen*";
+            // 
             // FrmCargarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(550, 693);
+            this.ClientSize = new System.Drawing.Size(544, 664);
+            this.Controls.Add(this.labelRecordatorioImagenes);
             this.Controls.Add(this.buttonBorrarCampoUrl);
             this.Controls.Add(this.labelURL);
             this.Controls.Add(this.textBoxURL);
@@ -395,5 +406,6 @@
         private System.Windows.Forms.TextBox textBoxURL;
         private System.Windows.Forms.Label labelURL;
         private System.Windows.Forms.Button buttonBorrarCampoUrl;
+        private System.Windows.Forms.Label labelRecordatorioImagenes;
     }
 }
