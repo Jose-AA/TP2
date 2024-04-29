@@ -93,6 +93,7 @@ namespace TP2
 
         private void buttonAgregarArticulo_Click(object sender, EventArgs e)
         {
+            
             FrmCargarArticulo form = new FrmCargarArticulo();
             form.ShowDialog();
             actualizarListado();

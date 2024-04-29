@@ -15,12 +15,16 @@ namespace TP2
 {
     public partial class FrmCargarArticulo : Form
     {
+        
         private Articulo articulo = null;
         private List<Imagen> listaImagenes;
         private int imagenActual = 0;
+        
         public FrmCargarArticulo()
         {
             InitializeComponent();
+            
+            
         }
 
         private void cargar()
@@ -54,7 +58,11 @@ namespace TP2
 
         private void btnCrearArticulo_Click(object sender, EventArgs e)
         {
-            //Articulo nuevo = new Articulo();
+            
+            
+               //Articulo nuevo = new Articulo();
+
+            
             if(string.IsNullOrEmpty(txtNombre.Text)) { MessageBox.Show("El nombre no puede estar vacio"); return; }
             if (string.IsNullOrEmpty(txtCodigo.Text)) { MessageBox.Show("El codigo no puede estar vacio"); return; }
             if (string.IsNullOrEmpty(textBoxDescripcion.Text)) { MessageBox.Show("La descripcion no puede estar vacia"); return; }
@@ -123,7 +131,7 @@ namespace TP2
 
         private void FrmCargarArticulo_Load(object sender, EventArgs e)
         {
-
+            
             cargar();
 
             ddlCategoria.DisplayMember = "Descripcion";
@@ -144,6 +152,12 @@ namespace TP2
                 cargarImagen(articulo.imagenes[0].Url);
 
             }
+            /*else
+            {
+                articulo = new Articulo();
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                articulo.id = negocio.UltimoArticuloRegistrado();
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -155,10 +169,10 @@ namespace TP2
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
-             
+            articulo = new Articulo();
+            articulo.imagenes = new List<Imagen>();
             ArticuloNegocio negocio = new ArticuloNegocio();
-            int IdArticuloEstimado = negocio.UltimoArticuloRegistrado();
-                
+            int IdArticuloEstimado = negocio.UltimoArticuloRegistrado() - 1;
             
             Imagen ima = new Imagen();
 
@@ -172,9 +186,9 @@ namespace TP2
 
             cargarImagen(textBoxURL.Text);
             MessageBox.Show("Imagen cargada al articulo");
-
-            //negocio.EliminarImagenesSinArticulo();
+            
         }
+            //negocio.EliminarImagenesSinArticulo();
 
         private void cargarImagen(string imagen)
         {
