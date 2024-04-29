@@ -15,16 +15,13 @@ namespace TP2
 {
     public partial class FrmCargarArticulo : Form
     {
-        
         private Articulo articulo = null;
         private List<Imagen> listaImagenes;
         private int imagenActual = 0;
-        
+        bool nuevoArticulo = false;
         public FrmCargarArticulo()
         {
             InitializeComponent();
-            
-            
         }
 
         private void cargar()
@@ -58,11 +55,7 @@ namespace TP2
 
         private void btnCrearArticulo_Click(object sender, EventArgs e)
         {
-            
-            
-               //Articulo nuevo = new Articulo();
-
-            
+            //Articulo nuevo = new Articulo();
             if(string.IsNullOrEmpty(txtNombre.Text)) { MessageBox.Show("El nombre no puede estar vacio"); return; }
             if (string.IsNullOrEmpty(txtCodigo.Text)) { MessageBox.Show("El codigo no puede estar vacio"); return; }
             if (string.IsNullOrEmpty(textBoxDescripcion.Text)) { MessageBox.Show("La descripcion no puede estar vacia"); return; }
@@ -74,13 +67,7 @@ namespace TP2
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                bool ArticuloNoexistente = false;
-                if (articulo == null) { 
-                articulo = new Articulo();
-                ArticuloNoexistente = true;
-                    articulo.id = negocio.UltimoArticuloRegistrado();
-                }
-
+                
                 articulo.nombre = txtNombre.Text;
                 articulo.codigo = txtCodigo.Text;
                 articulo.descripcion = textBoxDescripcion.Text;
@@ -92,14 +79,12 @@ namespace TP2
                 articulo.categoriaArticulo.Descripcion = ((Categoria)ddlCategoria.SelectedItem).Descripcion;
                 articulo.categoriaArticulo.ID = ((Categoria)ddlCategoria.SelectedItem).ID;
 
-             
-                articulo.imagenes = new List<Imagen>();
 
                 Imagen ima = new Imagen(articulo.id, textBoxURL.Text);
 
                 articulo.imagenes.Add(ima);                
 
-                if(!ArticuloNoexistente)
+                if(nuevoArticulo == false)
                 {
                     MessageBox.Show("modificando ....");
                     negocio.modificar(articulo);
@@ -113,6 +98,7 @@ namespace TP2
                     negocio.agregarImagen(articulo.id, ima.Url);
                     negocio.Agregar2(articulo);
                     MessageBox.Show("Articulo agregado correctamente");
+                    nuevoArticulo = false;
                 }
 
                 
@@ -131,7 +117,7 @@ namespace TP2
 
         private void FrmCargarArticulo_Load(object sender, EventArgs e)
         {
-            
+
             cargar();
 
             ddlCategoria.DisplayMember = "Descripcion";
@@ -152,12 +138,14 @@ namespace TP2
                 cargarImagen(articulo.imagenes[0].Url);
 
             }
-            /*else
+            else
             {
-                articulo = new Articulo();
                 ArticuloNegocio negocio = new ArticuloNegocio();
+                articulo = new Articulo();
+                articulo.imagenes = new List<Imagen>();
                 articulo.id = negocio.UltimoArticuloRegistrado();
-            }*/
+                nuevoArticulo = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -169,10 +157,10 @@ namespace TP2
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
-            articulo = new Articulo();
-            articulo.imagenes = new List<Imagen>();
+             
             ArticuloNegocio negocio = new ArticuloNegocio();
-            int IdArticuloEstimado = negocio.UltimoArticuloRegistrado() - 1;
+            int IdArticuloEstimado = negocio.UltimoArticuloRegistrado();
+                
             
             Imagen ima = new Imagen();
 
@@ -186,9 +174,9 @@ namespace TP2
 
             cargarImagen(textBoxURL.Text);
             MessageBox.Show("Imagen cargada al articulo");
-            
-        }
+
             //negocio.EliminarImagenesSinArticulo();
+        }
 
         private void cargarImagen(string imagen)
         {
