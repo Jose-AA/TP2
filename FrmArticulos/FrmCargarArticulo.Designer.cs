@@ -115,6 +115,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(88, 17);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 0;
@@ -122,6 +123,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(88, 53);
+            this.txtCodigo.MaxLength = 50;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(121, 20);
             this.txtCodigo.TabIndex = 1;
@@ -129,6 +131,7 @@
             // textBoxDescripcion
             // 
             this.textBoxDescripcion.Location = new System.Drawing.Point(364, 17);
+            this.textBoxDescripcion.MaxLength = 150;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(121, 20);
             this.textBoxDescripcion.TabIndex = 4;
@@ -191,6 +194,7 @@
             // textBoxURL
             // 
             this.textBoxURL.Location = new System.Drawing.Point(104, 478);
+            this.textBoxURL.MaxLength = 1000;
             this.textBoxURL.Name = "textBoxURL";
             this.textBoxURL.Size = new System.Drawing.Size(338, 20);
             this.textBoxURL.TabIndex = 17;
