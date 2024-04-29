@@ -168,6 +168,7 @@
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(121, 20);
             this.textBoxPrecio.TabIndex = 12;
+            this.textBoxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecio_KeyPress);
             // 
             // labelNuevaMarca
             // 
@@ -370,6 +371,8 @@
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNombre);
+            this.MaximumSize = new System.Drawing.Size(560, 703);
+            this.MinimumSize = new System.Drawing.Size(560, 703);
             this.Name = "FrmCargarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carga de Articulos";

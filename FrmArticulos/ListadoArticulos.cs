@@ -250,6 +250,17 @@ namespace TP2
         {
             Application.Exit();
         }
+
+        private void dgvListadoArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if(e.ColumnIndex == 4 && e.Value.GetType()==typeof(decimal) && e.Value !=null)
+            {
+                decimal valorFormateado = (decimal)e.Value;
+                e.Value = valorFormateado.ToString("0.00");
+                e.FormattingApplied = true;
+
+            }
+        }
     }
 }
 

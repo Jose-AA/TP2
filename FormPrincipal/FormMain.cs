@@ -119,5 +119,10 @@ namespace TP2
            FrmCategorias frmCategorias = new FrmCategorias();
             frmCategorias.ShowDialog(); 
         }
+
+        private void toolStripButtonLogOut_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

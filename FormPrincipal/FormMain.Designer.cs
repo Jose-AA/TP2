@@ -43,7 +43,6 @@
             this.buscarPorNúmeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirCategoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripUsuarioConectado = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelArticulos = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -55,7 +54,6 @@
             this.toolStripButtonMarcas = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCategorias = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLogOut = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStripUsuarioConectado.SuspendLayout();
             this.SuspendLayout();
@@ -69,8 +67,7 @@
             this.artículoToolStripMenuItem,
             this.marcasToolStripMenuItem,
             this.categoríasToolStripMenuItem,
-            this.salirToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -220,12 +217,6 @@
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(99, 36);
-            this.toolStripMenuItem1.Text = "               ";
-            // 
             // toolStripUsuarioConectado
             // 
             this.toolStripUsuarioConectado.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -241,8 +232,7 @@
             this.toolStripSeparator3,
             this.toolStripButtonMarcas,
             this.toolStripButtonCategorias,
-            this.toolStripButtonLogOut,
-            this.toolStripLabel1});
+            this.toolStripButtonLogOut});
             this.toolStripUsuarioConectado.Location = new System.Drawing.Point(0, 514);
             this.toolStripUsuarioConectado.Name = "toolStripUsuarioConectado";
             this.toolStripUsuarioConectado.Size = new System.Drawing.Size(1079, 57);
@@ -341,13 +331,7 @@
             this.toolStripButtonLogOut.Size = new System.Drawing.Size(54, 54);
             this.toolStripButtonLogOut.Text = "toolStripButton2";
             this.toolStripButtonLogOut.ToolTipText = "Logout";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(129, 54);
-            this.toolStripLabel1.Text = "USUARIO CONECTADO";
+            this.toolStripButtonLogOut.Click += new System.EventHandler(this.toolStripButtonLogOut_Click);
             // 
             // FormMain
             // 
@@ -368,7 +352,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "GESTION  DE ARTICULOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -400,8 +384,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButtonMarcas;
         private System.Windows.Forms.ToolStripButton toolStripButtonCategorias;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripButton toolStripButtonLogOut;
         public System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;

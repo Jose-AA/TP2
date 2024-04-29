@@ -282,5 +282,16 @@ namespace TP2
                 MessageBox.Show("Nada para mostrar");
             }
         }
+
+        private void textBoxPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if((e.KeyChar <48 || e.KeyChar > 59) && e.KeyChar != 8 && e.KeyChar != ',')
+            {
+                e.Handled = true;
+
+            }
+        }
+
+
     }
 }
