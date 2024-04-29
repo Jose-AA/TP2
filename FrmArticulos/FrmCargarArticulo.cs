@@ -50,6 +50,8 @@ namespace TP2
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
+            ArticuloNegocio acceso = new ArticuloNegocio();
+            acceso.EliminarImagenesSinArticulo();
             this.Close();
         }
 
@@ -117,7 +119,7 @@ namespace TP2
 
         private void FrmCargarArticulo_Load(object sender, EventArgs e)
         {
-
+            this.ControlBox = false;
             cargar();
 
             ddlCategoria.DisplayMember = "Descripcion";
