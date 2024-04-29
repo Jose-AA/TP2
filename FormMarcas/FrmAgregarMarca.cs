@@ -52,12 +52,12 @@ namespace TP2
         {   
 
             Marca nuevaMarca = new Marca();
-       
-            nuevaMarca.descripcion = TexBoxNombreNM.Text;
+            string nombreMarca = TexBoxNombreNM.Text.Trim();
+            nuevaMarca.descripcion = nombreMarca;
 
             try
             {
-                if (TexBoxNombreNM.Text == "")
+                if (string.IsNullOrEmpty(nombreMarca))
                 {
                     MessageBox.Show("No se puede agregar una marca sin nombre");
                     return;

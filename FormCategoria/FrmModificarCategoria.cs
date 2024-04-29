@@ -33,11 +33,11 @@ namespace TP2
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
-
-            categoria.Descripcion = txtDescripcion.Text;
+            string nuevaDescripcionCategoria = txtDescripcion.Text.Trim();
+            categoria.Descripcion = nuevaDescripcionCategoria;
             CategoriaNegocio negocio = new CategoriaNegocio();
 
-            if(categoria.Descripcion == "")
+            if(string.IsNullOrEmpty(nuevaDescripcionCategoria))
             {
                 MessageBox.Show("Por favor ingrese una descripción");
                 return;

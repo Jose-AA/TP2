@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.TexBoxIdNM = new System.Windows.Forms.TextBox();
             this.TexBoxNombreNM = new System.Windows.Forms.TextBox();
@@ -70,6 +70,7 @@
             // TexBoxNombreNM
             // 
             this.TexBoxNombreNM.Location = new System.Drawing.Point(130, 176);
+            this.TexBoxNombreNM.MaxLength = 50;
             this.TexBoxNombreNM.Name = "TexBoxNombreNM";
             this.TexBoxNombreNM.Size = new System.Drawing.Size(234, 20);
             this.TexBoxNombreNM.TabIndex = 2;
@@ -133,8 +134,8 @@
             // 
             // dtgMarcas
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
-            this.dtgMarcas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info;
+            this.dtgMarcas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgMarcas.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dtgMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -189,6 +190,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(458, 686);
             this.Name = "FrmAgregarMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Marca";
             this.Load += new System.EventHandler(this.FormMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMarcas)).EndInit();

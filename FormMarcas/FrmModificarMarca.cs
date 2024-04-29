@@ -56,8 +56,10 @@ namespace TP2
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   
-            if(Descripcion_a_Modificar.Text == "")
+        {
+            string nuevaDescripcionMarca = Descripcion_a_Modificar.Text.Trim();
+
+            if(string.IsNullOrEmpty(nuevaDescripcionMarca))
             {
                 MessageBox.Show("Debe seleccionar una marca para modificar");
                 return;

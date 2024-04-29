@@ -80,6 +80,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(89, 149);
+            this.txtDescripcion.MaxLength = 50;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(135, 20);
             this.txtDescripcion.TabIndex = 0;
@@ -97,6 +98,7 @@
             this.Controls.Add(this.lblTitulo);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(333, 320);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(333, 320);
             this.Name = "FrmModificarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

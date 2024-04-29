@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvModificarM = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.Descripcion_a_Modificar = new System.Windows.Forms.TextBox();
@@ -46,8 +46,8 @@
             // 
             // dgvModificarM
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Info;
-            this.dgvModificarM.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info;
+            this.dgvModificarM.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvModificarM.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvModificarM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModificarM.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -73,6 +73,7 @@
             // 
             this.Descripcion_a_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descripcion_a_Modificar.Location = new System.Drawing.Point(74, 557);
+            this.Descripcion_a_Modificar.MaxLength = 50;
             this.Descripcion_a_Modificar.Name = "Descripcion_a_Modificar";
             this.Descripcion_a_Modificar.Size = new System.Drawing.Size(258, 31);
             this.Descripcion_a_Modificar.TabIndex = 2;
@@ -156,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(396, 758);
+            this.ClientSize = new System.Drawing.Size(396, 749);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
@@ -167,8 +168,13 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvModificarM);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(412, 788);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(412, 726);
             this.Name = "FrmModificarMarca";
-            this.Text = "FrmModificarMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Modificar Marca";
             this.Load += new System.EventHandler(this.FrmModificarMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvModificarM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

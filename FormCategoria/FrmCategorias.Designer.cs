@@ -125,6 +125,7 @@
             this.Controls.Add(this.lblTitulo);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(654, 489);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(654, 489);
             this.Name = "FrmCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
